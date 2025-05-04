@@ -1,0 +1,405 @@
+/**
+ * @name M3 Colour Discord
+ * @description M3 colour Discord
+ * @author WalkQuackBack
+ * @version 0.0.0
+*/
+
+:root {
+    --hover: 8%;
+    --active: 16%;
+    --disabled: 50%;
+    
+    /* Theme vars */
+    --hover-transparent: color-mix(in oklab, transparent, currentColor var(--hover));
+    --active-transparent: color-mix(in oklab, transparent, currentColor var(--active));
+
+    /* Custom */
+    --dnd: var(--md-extended-color-red-color);
+    --idle: var(--md-extended-color-yellow-color);
+    --offline: var(--md-sys-color-outline);
+    --online: var(--md-extended-color-green-color);
+}
+
+.visual-refresh body,
+.visual-refresh .theme-dark:not(.custom-user-profile-theme),
+.visual-refresh .theme-light:not(.custom-user-profile-theme) {
+    /* --activity-card-background: var(--bg-3);
+    --alert-bg: red;
+    --autocomplete-bg: var(--bg-3);
+
+    --background-accent: var(--bg-2);
+    --background-floating: var(--bg-3);
+    --background-nested-floating: var(--bg-4);
+    --background-mentioned: var(--mention);
+    --background-mentioned-hover: var(--mention-hover);
+    --background-message-automod: red;
+    --background-message-automod-hover: red;
+    --background-message-highlight: var(--reply);
+    --background-message-highlight-hover: var(--reply-hover);
+    --background-message-hover: var(--message-hover);
+
+    --background-primary: var(--bg-4);
+    --background-secondary: var(--bg-3);
+    --background-secondary-alt: var(--bg-3);
+    --background-tertiary: var(--bg-4);
+
+    --bg-base-primary: var(--bg-4);
+    --bg-base-secondary: var(--bg-4);
+    --bg-base-tertiary: var(--bg-3);
+    --background-mod-subtle: var(--hover);
+    --background-mod-normal: var(--active);
+    --background-mod-strong: var(--active-2);
+
+    */
+    --background-surface-highest: var(--md-sys-color-surface-container-highest);
+    --background-surface-higher: var(--md-sys-color-surface-container-high);
+    --background-surface-high: var(--md-sys-color-surface-container);
+    --background-base-low: var(--md-sys-color-surface);
+    --background-base-lower: var(--md-sys-color-surface-container-low);
+    --background-base-lowest: var(--md-sys-color-surface-container-lowest);
+    /*
+
+    --bg-surface-overlay: var(--bg-4);
+    --bg-surface-raised: var(--bg-3);
+    --chat-background-default: var(--bg-3);
+    --chat-text-muted: var(--text-5);
+    --input-background: var(--bg-3);
+    --modal-background: var(--bg-4);
+    --modal-footer-background: var(--bg-4);
+
+    --background-modifier-accent: var(--hover);
+    --background-modifier-active: var(--active);
+    --background-modifier-hover: var(--hover);
+    --background-modifier-selected: var(--active);
+
+    --bg-mod-faint: var(--hover);
+    --bg-mod-subtle: var(--bg-2);
+    --bg-mod-strong: var(--bg-2);
+    --bg-brand: var(--accent-2);
+
+    --border-faint: var(--border-light);
+    --border-subtle: var(--border);
+    --border-normal: var(--border);
+    --border-strong: var(--border);
+    --input-border: var(--border);
+
+    */
+
+    --button-danger-background: var(--md-extended-color-red-color);
+    --button-danger-background-active: color-mix(in oklab, var(--button-danger-background), currentColor var(--active));
+    --button-danger-background-hover: color-mix(in oklab, var(--button-danger-background), currentColor var(--hover));
+    --button-danger-background-disabled: color-mix(in oklab, var(--button-danger-background), transparent var(--disabled));
+    --button-danger-border: transparent;
+
+    --button-filled-brand-text: var(--md-sys-color-on-primary);
+    --button-filled-brand-background: var(--md-sys-color-primary);
+    --button-filled-brand-background-active: color-mix(in oklab, var(--button-filled-brand-background), currentColor var(--active));
+    --button-filled-brand-background-hover: color-mix(in oklab, var(--button-filled-brand-background), currentColor var(--hover));
+    --button-filled-brand-border: transparent;
+
+    --button-filled-brand-inverted-background: var(--md-sys-color-inverse-surface);
+    --button-filled-brand-inverted-background-hover: color-mix(in oklab, var(--button-filled-brand-inverted-background), currentColor var(--hover));
+    --button-filled-brand-inverted-background-active: color-mix(in oklab, var(--button-filled-brand-inverted-background), currentColor var(--active));
+    --button-filled-brand-inverted-text: var(--md-sys-color-inverse-on-surface);
+
+    --button-filled-white-background: var(--md-sys-color-inverse-surface);
+    --button-filled-white-background-hover: color-mix(in oklab, var(--button-filled-white-background), currentColor var(--hover));
+    --button-filled-white-background-active: color-mix(in oklab, var(--button-filled-white-background), currentColor var(--active));
+    --button-filled-white-text: var(--md-sys-color-inverse-on-surface);
+
+    --button-outline-brand-background: transparent;
+    --button-outline-brand-background-hover: color-mix(in oklab, var(--button-outline-brand-background), currentColor var(--hover));
+    --button-outline-brand-background-active: color-mix(in oklab, var(--button-outline-brand-background), currentColor var(--active));
+    --button-outline-brand-border: var(--md-sys-color-primary);
+    --button-outline-brand-border-active: color-mix(in oklab, var(--button-outline-brand-border), currentColor var(--hover));
+    --button-outline-brand-border-hover: color-mix(in oklab, var(--button-outline-brand-border), currentColor var(--active));
+    --button-outline-brand-text: var(--md-sys-color-primary);
+    --button-outline-brand-text-active: var(--md-sys-color-primary);
+    --button-outline-brand-text-hover: var(--md-sys-color-primary);
+
+    --button-outline-danger-background: transparent;
+    --button-outline-danger-background-hover: color-mix(in oklab, var(--button-outline-danger-background), currentColor var(--hover));
+    --button-outline-danger-background-active: color-mix(in oklab, var(--button-outline-danger-background), currentColor var(--active));
+    --button-outline-danger-border: var(--md-extended-color-red-color);
+    --button-outline-danger-border-active: color-mix(in oklab, var(--button-outline-danger-border), currentColor var(--hover));
+    --button-outline-danger-border-hover: color-mix(in oklab, var(--button-outline-danger-border), currentColor var(--active));
+    --button-outline-danger-text: var(--md-extended-color-red-color);
+    --button-outline-danger-text-active: var(--md-extended-color-red-color);
+    --button-outline-danger-text-hover: var(--md-extended-color-red-color);
+
+    --button-outline-primary-background: transparent;
+    --button-outline-primary-background-hover: color-mix(in oklab, var(--button-outline-primary-background), currentColor var(--hover));
+    --button-outline-primary-background-active: color-mix(in oklab, var(--button-outline-primary-background), currentColor var(--active));
+    --button-outline-primary-border: var(--md-sys-color-primary);
+    --button-outline-primary-border-active: color-mix(in oklab, var(--button-outline-primary-border), currentColor var(--hover));
+    --button-outline-primary-border-hover: color-mix(in oklab, var(--button-outline-primary-border), currentColor var(--active));
+    --button-outline-primary-text: var(--md-sys-color-primary);
+    --button-outline-primary-text-active: var(--md-sys-color-primary);
+    --button-outline-primary-text-hover: var(--md-sys-color-primary);
+
+    --button-outline-positive-background: transparent;
+    --button-outline-positive-background-hover: color-mix(in oklab, var(--button-outline-positive-background), currentColor var(--hover));
+    --button-outline-positive-background-active: color-mix(in oklab, var(--button-outline-positive-background), currentColor var(--active));
+    --button-outline-positive-border: var(--md-extended-color-green-color);
+    --button-outline-positive-border-active: color-mix(in oklab, var(--button-outline-positive-border), currentColor var(--hover));
+    --button-outline-positive-border-hover: color-mix(in oklab, var(--button-outline-positive-border), currentColor var(--active));
+    --button-outline-positive-text: var(--md-extended-color-green-color);
+    --button-outline-positive-text-active: var(--md-extended-color-green-color);
+    --button-outline-positive-text-hover: var(--md-extended-color-green-color);
+
+    --button-positive-background: var(--md-extended-color-green-color);
+    --button-positive-background-hover: color-mix(in oklab, var(--button-positive-background), currentColor var(--hover));
+    --button-positive-background-active: color-mix(in oklab, var(--button-positive-background), currentColor var(--active));
+    --button-positive-background-disabled: color-mix(in oklab, var(--button-positive-background), transparent var(--disabled));
+    --button-positive-border: var(--button-border);
+
+    --button-secondary-background: var(--md-sys-color-surface-container);
+    --button-secondary-background-hover: color-mix(in oklab, var(--button-secondary-background), currentColor var(--hover));
+    --button-secondary-background-active: color-mix(in oklab, var(--button-secondary-background), currentColor var(--active));
+    --button-secondary-background-disabled: color-mix(in oklab, var(--button-secondary-background), transparent var(--disabled));
+    --button-secondary-text: var(--md-sys-color-on-surface);
+
+    --button-transparent-background: transparent;
+    --button-transparent-background-hover: color-mix(in oklab, var(--button-transparent-background), currentColor var(--hover));
+    --button-transparent-background-active: color-mix(in oklab, var(--button-transparent-background), currentColor var(--active));
+    --button-transparent-text: var(--md-sys-color-on-surface);
+    /*
+
+    --redesign-button-secondary-text: var(--text-3);
+
+    --polls-voted-fill: color-mix(in hsl, var(--accent-2), transparent 90%);
+    --polls-victor-fill: color-mix(in hsl, var(--green-2), transparent 90%);
+
+    --card-primary-bg: var(--bg-3);
+    --card-secondary-bg: var(--bg-2);
+    --channel-icon: var(--text-4);
+    --channels-default: var(--text-4);
+
+    --embed-title: var(--text-2);
+
+    --header-primary: var(--text-2);
+    --header-secondary: var(--text-4);
+    --header-muted: var(--text-4);
+
+    --icon-muted: var(--text-5);
+    --icon-primary: var(--text-3);
+    --icon-secondary: var(--text-4);
+    --icon-tertiary: var(--text-4);
+
+    --info-danger-background: red;
+    --info-danger-text: red;
+    --info-help-background: color-mix(in hsl, var(--blue-2), transparent 80%);
+    --info-help-foreground: var(--blue-1);
+    --info-help-text: var(--blue-1);
+    --info-positive-background: color-mix(in hsl, var(--yellow-1), transparent 80%);
+    --info-positive-text: var(--green-1);
+    --info-warning-background: color-mix(in hsl, var(--yellow-2), transparent 80%);
+    --info-warning-text: var(--yellow-1); */
+
+    --text-brand: var(--md-sys-color-primary);
+    --text-danger: var(--md-sys-color-error);
+
+    --text-link: var(--md-sys-color-primary);
+    --text-link-low-saturation: var(--md-sys-color-primary);
+
+    --text-low-contrast: var(--md-sys-color-outline);
+    --text-message-preview-low-sat: var(--md-sys-color-on-surface-variant);
+
+    --text-muted: var(--md-sys-color-outline);
+    --text-muted-on-default: var(--text-4);
+
+    --text-normal: var(--md-sys-color-on-surface);
+    --text-positive: var(--md-extended-color-green-color);
+
+    --text-primary: var(--md-sys-color-on-surface);
+    --text-secondary: var(--md-sys-color-on-surface-variant);
+
+    --text-warning: var(--md-extended-color-yellow-color);
+
+    --text-default: var(--md-sys-color-on-surface);
+
+    --text-feedback-critical: var(--md-extended-color-red-color);
+    --text-feedback-positive: var(--md-extended-color-green-color);
+    --text-feedback-info: var(--md-extended-color-blue-color);
+    --text-feedback-warning: var(--md-extended-color-yellow-color);
+
+    --text-tertiary: var(--md-sys-color-on-surface-variant);
+
+    /* --user-profile-overlay-background: var(--bg-4);
+    --user-profile-overlay-background-hover: var(--bg-2); */
+
+    --status-danger: var(--md-extended-color-red-color);
+    --status-danger-background: var(--md-extended-color-red-color-container);
+    --status-danger-text: var(--md-extended-color-red-on-color);
+
+    --status-dnd: var(--dnd);
+    --status-idle: var(--idle);
+    --status-offline: var(--offline);
+    --status-online: var(--online);
+
+    --status-positive: var(--md-extended-color-green-color);
+    --status-positive-background: var(--md-extended-color-green-color);
+    --status-positive-text: var(--md-extended-color-green-on-color);
+
+    --status-speaking: var(--md-extended-color-green-color);
+    --status-warning: var(--md-extended-color-yellow-color);
+    --status-warning-background: var(--md-extended-color-yellow-color);
+    --status-warning-text: var(--md-extended-color-yellow-on-color);
+
+    /*--background-feedback-critical: color-mix(in hsl, var(--red-2), transparent 80%);
+    --background-feedback-info: color-mix(in hsl, var(--blue-2), transparent 80%);
+    --background-feedback-positive: color-mix(in hsl, var(--green-2), transparent 80%);
+    --background-feedback-warning: color-mix(in hsl, var(--yellow-2), transparent 80%);
+
+    --interactive-normal: var(--text-4);
+    --interactive-hover: var(--text-3);
+    --interactive-active: var(--text-3);
+    --interactive-muted: var(--text-5);
+
+    --mention-foreground: var(--accent-1);
+    --mention-background: color-mix(in hsl, var(--accent-2), transparent 90%);
+
+    --channel-text-area-placeholder: var(--text-5);
+
+    --message-reacted-text: var(--text-2);
+    --message-reacted-background: color-mix(in hsl, var(--accent-2), transparent 80%);
+
+    --custom-channel-members-bg: var(--bg-4);
+
+    */
+    --redesign-input-control-selected: var(--md-sys-color-primary-container);
+    --checkbox-background-checked: var(--md-sys-color-primary-container);
+    --checkbox-border-checked: var(--md-sys-color-primary-container);
+    /*
+    --scrollbar-auto-thumb: var(--bg-3);
+    --scrollbar-auto-track: transparent;
+    --scrollbar-thin-thumb: var(--bg-3);
+    --scrollbar-thin-track: transparent;
+
+    --white: var(--text-0);
+    --white-500: var(--text-0);
+    --redesign-button-overlay-alpha-text: var(--text-2);
+
+    --brand-360: var(--accent-2);
+    --brand-500: var(--accent-2);
+    --blurple-50: var(--accent-2);
+
+    --red-400: var(--red-2);
+    --red-500: var(--red-3);
+
+    --green-360: var(--green-2);
+    --primary-400: var(--text-4);
+
+    --deprecated-text-input-bg: var(--bg-3);
+    --deprecated-text-input-border: var(--border-light);
+
+    --background-code: var(--bg-3); */
+}
+
+.visual-refresh.visual-refresh.visual-refresh {
+    .lookFilled__201d5 {
+        &.colorGreen__201d5 {
+            color: var(--md-extended-color-green-on-color);
+        }
+        &.colorRed__201d5 {
+            color: var(--md-extended-color-red-on-color);
+        }
+    }
+    
+    .lookLink__201d5.colorLink__201d5,
+    .lookLink__201d5.colorBrand__201d5,
+    .lookLink__201d5.colorPrimary__201d5 {
+        color: var(--md-sys-color-primary);
+        &:hover .contents__201d5 {
+            --button--underline-color: currentColor;
+        }
+    }
+
+    /* Checkbox icon */
+    .checkbox_f525d3.checked_f525d3 path {
+fill: var(--md-sys-color-on-primary-container);
+    }
+
+    /* Radio circle */
+    .refreshIcon__001a7 {
+        fill: var(--md-sys-color-on-primary-container);
+    }
+
+    /* Slider track */
+    .mini_a562c8 .barFill_a562c8, .slider_a562c8 .barFill_a562c8 {
+        background: var(--md-sys-color-primary);
+    }
+}
+
+:root {
+    --md-sys-color-primary: rgb(246 188 112);
+    --md-sys-color-surface-tint: rgb(246 188 112);
+    --md-sys-color-on-primary: rgb(70 43 0);
+    --md-sys-color-primary-container: rgb(100 63 0);
+    --md-sys-color-on-primary-container: rgb(255 221 182);
+    --md-sys-color-secondary: rgb(222 194 162);
+    --md-sys-color-on-secondary: rgb(62 45 22);
+    --md-sys-color-secondary-container: rgb(87 67 43);
+    --md-sys-color-on-secondary-container: rgb(251 222 188);
+    --md-sys-color-tertiary: rgb(186 205 159);
+    --md-sys-color-on-tertiary: rgb(38 53 20);
+    --md-sys-color-tertiary-container: rgb(59 76 41);
+    --md-sys-color-on-tertiary-container: rgb(213 233 186);
+    --md-sys-color-error: rgb(255 180 171);
+    --md-sys-color-on-error: rgb(105 0 5);
+    --md-sys-color-error-container: rgb(147 0 10);
+    --md-sys-color-on-error-container: rgb(255 218 214);
+    --md-sys-color-background: rgb(24 18 12);
+    --md-sys-color-on-background: rgb(237 224 212);
+    --md-sys-color-surface: rgb(24 18 12);
+    --md-sys-color-on-surface: rgb(237 224 212);
+    --md-sys-color-surface-variant: rgb(79 69 57);
+    --md-sys-color-on-surface-variant: rgb(211 196 180);
+    --md-sys-color-outline: rgb(156 142 128);
+    --md-sys-color-outline-variant: rgb(79 69 57);
+    --md-sys-color-shadow: rgb(0 0 0);
+    --md-sys-color-scrim: rgb(0 0 0);
+    --md-sys-color-inverse-surface: rgb(237 224 212);
+    --md-sys-color-inverse-on-surface: rgb(54 47 39);
+    --md-sys-color-inverse-primary: rgb(129 85 18);
+    --md-sys-color-primary-fixed: rgb(255 221 182);
+    --md-sys-color-on-primary-fixed: rgb(42 24 0);
+    --md-sys-color-primary-fixed-dim: rgb(246 188 112);
+    --md-sys-color-on-primary-fixed-variant: rgb(100 63 0);
+    --md-sys-color-secondary-fixed: rgb(251 222 188);
+    --md-sys-color-on-secondary-fixed: rgb(39 25 5);
+    --md-sys-color-secondary-fixed-dim: rgb(222 194 162);
+    --md-sys-color-on-secondary-fixed-variant: rgb(87 67 43);
+    --md-sys-color-tertiary-fixed: rgb(213 233 186);
+    --md-sys-color-on-tertiary-fixed: rgb(17 31 3);
+    --md-sys-color-tertiary-fixed-dim: rgb(186 205 159);
+    --md-sys-color-on-tertiary-fixed-variant: rgb(59 76 41);
+    --md-sys-color-surface-dim: rgb(24 18 12);
+    --md-sys-color-surface-bright: rgb(63 56 48);
+    --md-sys-color-surface-container-lowest: rgb(19 13 7);
+    --md-sys-color-surface-container-low: rgb(33 27 19);
+    --md-sys-color-surface-container: rgb(37 31 23);
+    --md-sys-color-surface-container-high: rgb(48 41 33);
+    --md-sys-color-surface-container-highest: rgb(59 52 43);
+    --md-extended-color-red-color: rgb(255 180 171);
+    --md-extended-color-red-on-color: rgb(86 30 25);
+    --md-extended-color-red-color-container: rgb(115 51 45);
+    --md-extended-color-red-on-color-container: rgb(255 218 214);
+    --md-extended-color-green-color: rgb(166 211 148);
+    --md-extended-color-green-on-color: rgb(19 56 10);
+    --md-extended-color-green-color-container: rgb(42 79 31);
+    --md-extended-color-green-on-color-container: rgb(194 239 174);
+    --md-extended-color-blue-color: rgb(167 200 255);
+    --md-extended-color-blue-on-color: rgb(4 48 95);
+    --md-extended-color-blue-color-container: rgb(36 71 119);
+    --md-extended-color-blue-on-color-container: rgb(213 227 255);
+    --md-extended-color-yellow-color: rgb(234 193 108);
+    --md-extended-color-yellow-on-color: rgb(64 45 0);
+    --md-extended-color-yellow-color-container: rgb(92 67 0);
+    --md-extended-color-yellow-on-color-container: rgb(255 222 161);
+    --md-extended-color-purple-color: rgb(216 186 250);
+    --md-extended-color-purple-on-color: rgb(60 36 90);
+    --md-extended-color-purple-color-container: rgb(84 59 114);
+    --md-extended-color-purple-on-color-container: rgb(238 219 255);
+}
