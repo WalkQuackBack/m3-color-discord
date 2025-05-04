@@ -28,16 +28,24 @@
     --alert-bg: red;
     --autocomplete-bg: var(--bg-3);
 
+    */
+
     --background-accent: var(--bg-2);
     --background-floating: var(--bg-3);
     --background-nested-floating: var(--bg-4);
+    
     --background-mentioned: var(--mention);
     --background-mentioned-hover: var(--mention-hover);
+
     --background-message-automod: red;
     --background-message-automod-hover: red;
+
     --background-message-highlight: var(--reply);
     --background-message-highlight-hover: var(--reply-hover);
+
     --background-message-hover: var(--message-hover);
+
+    /*
 
     --background-primary: var(--bg-4);
     --background-secondary: var(--bg-3);
@@ -247,10 +255,12 @@
     --status-warning-background: var(--md-extended-color-yellow-color);
     --status-warning-text: var(--md-extended-color-yellow-on-color);
 
-    /*--background-feedback-critical: color-mix(in hsl, var(--red-2), transparent 80%);
-    --background-feedback-info: color-mix(in hsl, var(--blue-2), transparent 80%);
-    --background-feedback-positive: color-mix(in hsl, var(--green-2), transparent 80%);
-    --background-feedback-warning: color-mix(in hsl, var(--yellow-2), transparent 80%);
+    --background-feedback-critical: var(--md-extended-color-red-color-container);
+    --background-feedback-info: var(--md-extended-color-blue-color-container);
+    --background-feedback-positive: var(--md-extended-color-blue-color-container);
+    --background-feedback-warning: var(--md-extended-color-blue-color-container);
+
+    /*
 
     --interactive-normal: var(--text-4);
     --interactive-hover: var(--text-3);
