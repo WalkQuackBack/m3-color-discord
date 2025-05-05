@@ -5,94 +5,112 @@
  * @version 0.0.0
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
     --hover: 8%;
     --active: 16%;
     --disabled: 50%;
+
+    --mod-subtle: 10%;
+    --mod-normal: 12%;
+    --mod-strong: 14%;
+    --mod-select: 16%;
+
+    --tint: 65%;
     
     /* Theme vars */
-    --hover-transparent: color-mix(in oklab, transparent, currentColor var(--hover));
-    --active-transparent: color-mix(in oklab, transparent, currentColor var(--active));
+    --hover-generic: color-mix(in oklab, transparent, var(--md-sys-color-on-surface) var(--hover));
+    --active-generic: color-mix(in oklab, transparent, var(--md-sys-color-on-surface) var(--active));
 
     /* Custom */
     --dnd: var(--md-extended-color-red-color);
     --idle: var(--md-extended-color-yellow-color);
     --offline: var(--md-sys-color-outline);
     --online: var(--md-extended-color-green-color);
+
+    /* Fonts */
+    /* --font-primary: 'Inter', 'Inter Tight', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-display: 'Inter Tight', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+
+    --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-display: 'Inter Tight', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .visual-refresh body,
 .visual-refresh .theme-dark:not(.custom-user-profile-theme),
-.visual-refresh .theme-light:not(.custom-user-profile-theme) {
+.visual-refresh .theme-light:not(.custom-user-profile-theme),
+.visual-refresh.theme-midnight:not(.custom-user-profile-theme) {
     /* --activity-card-background: var(--bg-3);
     --alert-bg: red;
     --autocomplete-bg: var(--bg-3);
 
     */
 
-    --background-accent: var(--bg-2);
-    --background-floating: var(--bg-3);
-    --background-nested-floating: var(--bg-4);
+    --background-accent: var(--md-sys-color-surface-container-low);
+    --background-floating: var(--md-sys-color-surface-container);
+    --background-nested-floating: var(--md-sys-color-surface-container-high);
     
-    --background-mentioned: var(--mention);
-    --background-mentioned-hover: var(--mention-hover);
+    --background-mentioned: color-mix(in oklab, var(--md-extended-color-yellow-color-container), transparent var(--tint));
+    --background-mentioned-hover: color-mix(in oklab, var(--background-mentioned), var(--md-extended-color-yellow-color) var(--hover));
 
     --background-message-automod: red;
     --background-message-automod-hover: red;
 
-    --background-message-highlight: var(--reply);
-    --background-message-highlight-hover: var(--reply-hover);
+    --background-message-highlight: color-mix(in oklab, var(--md-sys-color-primary-container), transparent var(--tint));
+    --background-message-highlight-hover: color-mix(in oklab, var(--background-message-highlight), var(--md-sys-color-primary) var(--hover));
 
-    --background-message-hover: var(--message-hover);
+    --background-message-hover: var(--hover-generic);
 
-    /*
+    /* Surface */
 
-    --background-primary: var(--bg-4);
-    --background-secondary: var(--bg-3);
-    --background-secondary-alt: var(--bg-3);
-    --background-tertiary: var(--bg-4);
+    --background-primary: var(--background-surface-higher);
+    --background-secondary: var(--background-surface-high);
+    --background-secondary-alt: var(--background-surface-high);
+    --background-tertiary: var(--background-base-low);
 
-    --bg-base-primary: var(--bg-4);
-    --bg-base-secondary: var(--bg-4);
-    --bg-base-tertiary: var(--bg-3);
-    --background-mod-subtle: var(--hover);
-    --background-mod-normal: var(--active);
-    --background-mod-strong: var(--active-2);
+    --bg-base-primary: var(--background-base-low);
+    --bg-base-secondary: var(--background-base-lower);
+    --bg-base-tertiary: var(--background-base-lowest);
+    
+    --bg-overlay-chat: var(--background-base-low);
 
-    */
     --background-surface-highest: var(--md-sys-color-surface-container-highest);
     --background-surface-higher: var(--md-sys-color-surface-container-high);
     --background-surface-high: var(--md-sys-color-surface-container);
-    --background-base-low: var(--md-sys-color-surface);
-    --background-base-lower: var(--md-sys-color-surface-container-low);
+    --background-base-low: var(--md-sys-color-surface-container-low);
+    --background-base-lower: var(--md-sys-color-surface);
     --background-base-lowest: var(--md-sys-color-surface-container-lowest);
-    /*
+    
+    /* Mod */
+    --background-mod-subtle: color-mix(in oklab, transparent, var(--md-sys-color-on-surface) var(--mod-subtle));
+    --background-mod-normal: color-mix(in oklab, transparent, var(--md-sys-color-on-surface) var(--mod-normal));
+    --background-mod-strong: color-mix(in oklab, transparent, var(--md-sys-color-on-surface) var(--mod-strong));
+    
+    --background-modifier-hover: var(--hover-generic);
+    --background-modifier-accent: var(--background-mod-normal);
+    --background-modifier-active: var(--background-mod-strong);
+    --background-modifier-selected: color-mix(in oklab, transparent, var(--md-sys-color-on-surface) var(--mod-select));
 
-    --bg-surface-overlay: var(--bg-4);
-    --bg-surface-raised: var(--bg-3);
-    --chat-background-default: var(--bg-3);
-    --chat-text-muted: var(--text-5);
-    --input-background: var(--bg-3);
-    --modal-background: var(--bg-4);
-    --modal-footer-background: var(--bg-4);
+    --bg-mod-faint: var(--background-mod-subtle);
+    --bg-mod-subtle: var(--background-mod-subtle);
+    --bg-mod-strong: var(--background-mod-strong);
+    --bg-brand: var(--md-sys-color-primary);
+    
+    --bg-surface-overlay: var(--background-surface-high);
+    --bg-surface-raised: var(--background-surface-higher);
+    --chat-background-default: var(--background-base-low);
+    --chat-text-muted: var(--text-muted);
+    --input-background: var(--background-base-low);
 
-    --background-modifier-accent: var(--hover);
-    --background-modifier-active: var(--active);
-    --background-modifier-hover: var(--hover);
-    --background-modifier-selected: var(--active);
+    --modal-background: var(--background-surface-high);
+    --modal-footer-background: var(--modal-background);
 
-    --bg-mod-faint: var(--hover);
-    --bg-mod-subtle: var(--bg-2);
-    --bg-mod-strong: var(--bg-2);
-    --bg-brand: var(--accent-2);
-
-    --border-faint: var(--border-light);
-    --border-subtle: var(--border);
-    --border-normal: var(--border);
-    --border-strong: var(--border);
-    --input-border: var(--border);
-
-    */
+    --border-faint: var(--md-sys-color-outline-variant);
+    --border-subtle: var(--md-sys-color-outline-variant);
+    --border-normal: var(--md-sys-color-outline-variant);
+    --border-strong: var(--md-sys-color-on-surface-variant);
+    --input-border: var(--md-sys-color-outline);
 
     --button-danger-background: var(--md-extended-color-red-color);
     --button-danger-background-active: color-mix(in oklab, var(--button-danger-background), currentColor var(--active));
@@ -139,12 +157,12 @@
     --button-outline-primary-background: transparent;
     --button-outline-primary-background-hover: color-mix(in oklab, var(--button-outline-primary-background), currentColor var(--hover));
     --button-outline-primary-background-active: color-mix(in oklab, var(--button-outline-primary-background), currentColor var(--active));
-    --button-outline-primary-border: var(--md-sys-color-primary);
+    --button-outline-primary-border: var(--md-sys-color-outline);
     --button-outline-primary-border-active: color-mix(in oklab, var(--button-outline-primary-border), currentColor var(--hover));
     --button-outline-primary-border-hover: color-mix(in oklab, var(--button-outline-primary-border), currentColor var(--active));
-    --button-outline-primary-text: var(--md-sys-color-primary);
-    --button-outline-primary-text-active: var(--md-sys-color-primary);
-    --button-outline-primary-text-hover: var(--md-sys-color-primary);
+    --button-outline-primary-text: var(--md-sys-color-on-surface);
+    --button-outline-primary-text-active: var(--md-sys-color-on-surface);
+    --button-outline-primary-text-hover: var(--md-sys-color-on-surface);
 
     --button-outline-positive-background: transparent;
     --button-outline-positive-background-hover: color-mix(in oklab, var(--button-outline-positive-background), currentColor var(--hover));
@@ -179,31 +197,31 @@
     --polls-voted-fill: color-mix(in hsl, var(--accent-2), transparent 90%);
     --polls-victor-fill: color-mix(in hsl, var(--green-2), transparent 90%);
 
-    --card-primary-bg: var(--bg-3);
-    --card-secondary-bg: var(--bg-2);
-    --channel-icon: var(--text-4);
-    --channels-default: var(--text-4);
+    */
+    --card-primary-bg: var(--background-base-low);
+    --card-secondary-bg: blue;
+    --channel-icon: var(--text-tertiary);
+    --channels-default: var(--text-tertiary);
 
-    --embed-title: var(--text-2);
+    --embed-title: var(--text-primary);
 
-    --header-primary: var(--text-2);
-    --header-secondary: var(--text-4);
-    --header-muted: var(--text-4);
+    --header-primary: var(--text-primary);
+    --header-secondary: var(--text-tertiary);
+    --header-muted: var(--text-muted);
 
-    --icon-muted: var(--text-5);
-    --icon-primary: var(--text-3);
-    --icon-secondary: var(--text-4);
-    --icon-tertiary: var(--text-4);
-
+    --info-danger-foreground: red;
     --info-danger-background: red;
     --info-danger-text: red;
     --info-help-background: color-mix(in hsl, var(--blue-2), transparent 80%);
     --info-help-foreground: var(--blue-1);
     --info-help-text: var(--blue-1);
+    --info-positive-foreground: var(--status-positive);
     --info-positive-background: color-mix(in hsl, var(--yellow-1), transparent 80%);
     --info-positive-text: var(--green-1);
-    --info-warning-background: color-mix(in hsl, var(--yellow-2), transparent 80%);
-    --info-warning-text: var(--yellow-1); */
+
+    --info-warning-foreground: var(--status-warning);
+    --info-warning-background: var(--status-warning-background);
+    --info-warning-text: var(--status-warning);
 
     --text-brand: var(--md-sys-color-primary);
     --text-danger: var(--md-sys-color-error);
@@ -214,25 +232,23 @@
     --text-low-contrast: var(--md-sys-color-outline);
     --text-message-preview-low-sat: var(--md-sys-color-on-surface-variant);
 
-    --text-muted: var(--md-sys-color-outline);
-    --text-muted-on-default: var(--text-4);
-
     --text-normal: var(--md-sys-color-on-surface);
     --text-positive: var(--md-extended-color-green-color);
 
+    --text-muted: var(--md-sys-color-outline);
+    --text-muted-on-default: var(--text-4);
     --text-primary: var(--md-sys-color-on-surface);
     --text-secondary: var(--md-sys-color-on-surface-variant);
+    --text-tertiary: var(--md-sys-color-on-surface-variant);
+
+    --icon-muted: var(--md-sys-color-outline);
+    --icon-primary: var(--md-sys-color-on-surface);
+    --icon-secondary: var(--md-sys-color-on-surface-variant);
+    --icon-tertiary: var(--md-sys-color-on-surface-variant);
 
     --text-warning: var(--md-extended-color-yellow-color);
 
     --text-default: var(--md-sys-color-on-surface);
-
-    --text-feedback-critical: var(--md-extended-color-red-color);
-    --text-feedback-positive: var(--md-extended-color-green-color);
-    --text-feedback-info: var(--md-extended-color-blue-color);
-    --text-feedback-warning: var(--md-extended-color-yellow-color);
-
-    --text-tertiary: var(--md-sys-color-on-surface-variant);
 
     /* --user-profile-overlay-background: var(--bg-4);
     --user-profile-overlay-background-hover: var(--bg-2); */
@@ -255,20 +271,26 @@
     --status-warning-background: var(--md-extended-color-yellow-color);
     --status-warning-text: var(--md-extended-color-yellow-on-color);
 
-    --background-feedback-critical: var(--md-extended-color-red-color-container);
-    --background-feedback-info: var(--md-extended-color-blue-color-container);
-    --background-feedback-positive: var(--md-extended-color-blue-color-container);
-    --background-feedback-warning: var(--md-extended-color-blue-color-container);
+    --background-feedback-critical: color-mix(in oklab, var(--md-extended-color-red-color-container), transparent var(--tint));
+    --background-feedback-info: color-mix(in oklab, var(--md-extended-color-blue-color-container), transparent var(--tint));
+    --background-feedback-positive: color-mix(in oklab, var(--md-extended-color-green-color-container), transparent var(--tint));
+    --background-feedback-warning: color-mix(in oklab, var(--md-extended-color-yellow-color-container), transparent var(--tint));
 
+    --text-feedback-critical: var(--md-extended-color-red-color);
+    --text-feedback-positive: var(--md-extended-color-green-color);
+    --text-feedback-info: var(--md-extended-color-blue-color);
+    --text-feedback-warning: var(--md-extended-color-yellow-color);
+
+    --premium-nitro-pink-text: var(--md-extended-color-purple-color);
+
+    --interactive-normal: var(--text-secondary);
+    --interactive-hover: var(--text-primary);
+    --interactive-active: var(--text-primary);
+    --interactive-muted: var(--text-muted);
+
+    --mention-foreground: var(--md-sys-color-primary);
+    --mention-background: var(--background-message-highlight);
     /*
-
-    --interactive-normal: var(--text-4);
-    --interactive-hover: var(--text-3);
-    --interactive-active: var(--text-3);
-    --interactive-muted: var(--text-5);
-
-    --mention-foreground: var(--accent-1);
-    --mention-background: color-mix(in hsl, var(--accent-2), transparent 90%);
 
     --channel-text-area-placeholder: var(--text-5);
 
@@ -278,9 +300,9 @@
     --custom-channel-members-bg: var(--bg-4);
 
     */
-    --redesign-input-control-selected: var(--md-sys-color-primary-container);
-    --checkbox-background-checked: var(--md-sys-color-primary-container);
-    --checkbox-border-checked: var(--md-sys-color-primary-container);
+    --redesign-input-control-selected: var(--md-sys-color-primary);
+    --checkbox-background-checked: var(--md-sys-color-primary);
+    --checkbox-border-checked: var(--md-sys-color-primary);
     /*
     --scrollbar-auto-thumb: var(--bg-3);
     --scrollbar-auto-track: transparent;
@@ -305,6 +327,20 @@
     --deprecated-text-input-border: var(--border-light);
 
     --background-code: var(--bg-3); */
+
+    --focus-primary: var(--md-sys-color-secondary);
+
+    /* Nitro */
+    --premium-tier-0-purple-for-gradients: var(--md-extended-color-purple-color-container);
+    --premium-tier-0-blue-for-gradients: var(--md-extended-color-blue-color-container);
+
+    --premium-tier-2-purple-for-gradients: var(--md-extended-color-purple-color-container);
+    --premium-tier-2-purple-for-gradients-2: var(--md-extended-color-purple-color-container);
+    --premium-tier-2-pink-for-gradients: var(--md-extended-color-pink-color-container);
+    
+    --custom-guild-list-padding: var(--space-xs);
+    --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding)* 2);
+    --custom-channel-header-height: calc(40px + var(--space-xs));
 }
 
 .visual-refresh.visual-refresh.visual-refresh {
@@ -316,6 +352,10 @@
             color: var(--md-extended-color-red-on-color);
         }
     }
+
+    .base__2b1f5[style*='background-color: var(--status-danger)'] {
+        color: var(--status-danger-text);
+    }
     
     .lookLink__201d5.colorLink__201d5,
     .lookLink__201d5.colorBrand__201d5,
@@ -326,72 +366,415 @@
         }
     }
 
-    /* Checkbox icon */
-    .checkbox_f525d3.checked_f525d3 path {
-fill: var(--md-sys-color-on-primary-container);
+    /* Glow red */
+    button.button__67645.redGlow__67645,
+    span.button__67645.redGlow__67645 {
+        background-color: var(--background-feedback-critical);
     }
 
+    /* Info banner */
+    .notice__30f28,
+    .newTopicsBarContainer__0f481 {
+        --custom-notice-background: var(--md-sys-color-primary-container);
+        --custom-notice-text: var(--md-sys-color-on-primary-container);
+        background: var(--custom-notice-background);
+        color: var(--custom-notice-text);
+    }
+    .header__30f28,
+    .newTopicsBarText__0f481 {
+        color: inherit;
+    }
+
+    /* Checkbox icon */
+    .checkbox_f525d3.checked_f525d3 path,
     /* Radio circle */
-    .refreshIcon__001a7 {
-        fill: var(--md-sys-color-on-primary-container);
+    .refreshIcon__001a7,
+    /* Dropdown selected check */
+    .selectedIcon__3f413 circle[fill="white"],
+    /* Circle icon hover */
+    .circleIconButton__5bc7e.selected__5bc7e,
+    /* Circle icon main hover */
+    .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8,
+    .wrapper__6e9f8:hover .childWrapper__6e9f8,
+    .circleIconButton__5bc7e:hover:not(.disabled__5bc7e),
+    /* Add Friend header text */
+    .tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf:not([aria-selected=true]) {
+        color: var(--md-sys-color-on-primary) !important;
+        fill: currentColor !important;
+    }
+
+    /* Add Friend header text selected */
+    .tabBar__133bf .addFriend__133bf.addFriend__133bf.addFriend__133bf[aria-selected=true] {
+        background-color: var(--md-sys-color-primary-container);
+    }
+
+    /* Dropdown selected */
+    .selectedIcon__3f413 {
+        color: var(--md-sys-color-primary);
+    }
+
+    /* User profile hover */
+    .avatarWrapper__37e49:hover,
+    .interactive__972a0:hover {
+        background-color: var(--background-modifier-hover);
     }
 
     /* Slider track */
     .mini_a562c8 .barFill_a562c8, .slider_a562c8 .barFill_a562c8 {
         background: var(--md-sys-color-primary);
     }
+
+    /* Switch */
+    .container__87bf1 {
+        &.checked__87bf1 {
+            background-color: var(--md-sys-color-primary) !important;
+            border-color: transparent;
+            .slider__87bf1 {
+                & > rect:first-of-type {
+                    fill: var(--md-sys-color-on-primary) !important;
+                }
+                & > svg:first-of-type > path {
+                    fill: var(--md-sys-color-on-primary-container) !important;
+                }
+            }
+        }
+        &:not(.checked__87bf1) {
+            background-color: var(--md-sys-color-surface-container-highest) !important;
+            border-color: var(--input-border);
+            .slider__87bf1 {
+                & > rect:first-of-type {
+                    fill: var(--md-sys-color-outline) !important;
+                    scale: 0.7;
+                }
+                & > svg:first-of-type > path {
+                    fill: var(--md-sys-color-surface-container-highest) !important;
+                    opacity: 0;
+                }
+            }
+        }
+        .slider__87bf1 {
+            & > rect:first-of-type {
+                transform-origin: center;
+                scale: 1;
+                transition: 150ms ease scale;
+            }
+            & > svg:first-of-type > path {
+                opacity: 0;
+            }
+        }
+    }
+
+    /* Tooltip (Inverse surface) */
+    .tooltip__382e7,
+    .tooltipPrimary__382e7,
+    .tooltipGrey__382e7 {
+        --tooltip-pointer-bg: var(--md-sys-color-inverse-surface);
+        background-color: var(--md-sys-color-inverse-surface);
+        color: var(--md-sys-color-inverse-on-surface);
+        font-weight: 500;
+        
+        /* Guild text */
+        .guildNameText_b1f768,
+        /* Generic */
+        .tooltipContent__382e7 > *
+        {
+            color: inherit !important;
+        }
+        .tooltipPointer__382e7.tooltipPointerBg__382e7:after {
+            border-top-color: transparent;
+        }
+    }
+
+    .tooltipPointer__382e7 {
+        border-top-color: var(--tooltip-pointer-bg);
+        /* display: none; */
+    }
+
+    /* M3 button style */
+    .button__201d5 {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        letter-spacing: 0.1pt;
+
+        transition-duration: 150ms;
+
+        &.sizeSmall__201d5 {
+            padding: 0 16px;
+        }
+
+        &.sizeTiny__201d5,
+        &.sizeSmall__201d5,
+        &.sizeMedium__201d5,
+        &.sizeLarge__201d5,
+        &.icon_fb7f94 {
+            border-radius: 40px;
+        }
+
+        /* Copy btn */
+        &.button_fffc15 {
+            padding: var(--space-4) var(--space-sm) !important;
+        }
+        &.attachButton__0923f {
+            padding: var(--space-12) var(--space-16);
+        }
+
+        /* Nitro btn */
+        /* &.floatingNitroButton__39749 {
+            color: ;
+        } */
+
+        --custom-button-button-xl-width: 148px;
+        --custom-button-button-xl-height: 50px;
+        --custom-button-button-lg-width: 130px;
+        --custom-button-button-lg-height: 44px;
+        --custom-button-button-md-width: 96px;
+        --custom-button-button-md-height: 40px;
+        --custom-button-button-sm-width: 60px;
+        --custom-button-button-sm-height: 36px;
+        --custom-button-button-tn-height: 24px;
+        --custom-button-button-tn-width: 52px;
+    }
+
+    /* Menus */
+    .menu_c1e9c4 {
+        border-color: transparent;
+        border-radius: 8px;
+        --_level: 2;
+        --_shadow-color: var(--md-sys-color-shadow);
+        box-shadow: none;
+        &::before, &::after {
+            content: '';
+            border-radius: inherit;
+            inset: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+        &::before {
+            box-shadow: 0px calc(1px*(clamp(0,var(--_level),1) + clamp(0,var(--_level) - 3,1) + 2*clamp(0,var(--_level) - 4,1))) calc(1px*(2*clamp(0,var(--_level),1) + clamp(0,var(--_level) - 2,1) + clamp(0,var(--_level) - 4,1))) 0px var(--_shadow-color);
+            opacity: .3;
+        }
+        &::after {
+            box-shadow: 0px calc(1px*(clamp(0,var(--_level),1) + clamp(0,var(--_level) - 1,1) + 2*clamp(0,var(--_level) - 2,3))) calc(1px*(3*clamp(0,var(--_level),2) + 2*clamp(0,var(--_level) - 2,3))) calc(1px*(clamp(0,var(--_level),4) + 2*clamp(0,var(--_level) - 4,1))) var(--_shadow-color);
+            opacity: .15;
+        }
+    }
+    .scroller_c1e9c4 {
+        padding: 0;
+        padding-block: 8px;
+        overflow: hidden auto !important;
+    }
+    /* Menu item */
+    .labelContainer_c1e9c4 {
+        padding: var(--space-8) 12px;
+        line-height: 24px;
+        font-size: 14px;
+        border-radius: 0;
+
+        flex-direction: row-reverse;
+        gap: 8px;
+
+        transition: 100ms background ease;
+
+        &[aria-haspopup="true"] {
+            flex-direction: row;
+        }
+        /* &[aria-haspopup="true"],
+        &:not(:has(.iconContainer_c1e9c4)) {
+            padding-inline-start: calc(12px + 20px + 8px);
+        } */
+        .label_c1e9c4 {
+            font-weight: 400;
+        }
+        .iconContainer_c1e9c4 {
+            margin-left: 0;
+        }
+    }
+    .separator_c1e9c4 {
+        margin-block: 4px;
+    }
+    .wrapper_f563df {
+        padding: 0;
+        margin-inline: var(--space-10);
+        padding-block: 2px var(--space-8);
+        gap: var(--space-4);
+        overflow: hidden;
+        .customItem_c1e9c4 {
+            border-radius: 4px;
+            & > .button_f563df {
+                background-color: var(--md-sys-color-surface-container);
+                border-radius: inherit;
+            }
+        }
+    }
+
+    .submenuPaddingContainer_c1e9c4 {
+        margin-inline: -8px;
+    }
+
+    /* Popover reaction bar */
+    .popoverReactionHoverBar_f84418 {
+        border-radius: 16px;
+        padding: 2px;
+    }
+    .hoverBarButton_f84418 {
+        border-radius: 12px;
+        padding: 4px;
+        /* Touch target */
+        &::before {
+            content: '';
+            border-radius: 0;
+            inset: 0;
+            position: absolute;
+            pointer-events: all;
+        }
+    }
+
+    /* GM3/MD focus ring */
+    .focus-rings-ring {
+        animation-name: outward-grow, outward-shrink;
+        animation-delay: 0s, calc(var(--md-focus-ring-duration, 600ms) * .25);
+        animation-duration: calc(var(--md-focus-ring-duration, 600ms) * .25), calc(var(--md-focus-ring-duration, 600ms) * .75);
+        animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+
+        box-shadow: none;
+        outline-style: solid;
+        outline-color: var(--__adaptive-focus-ring-color,var(--focus-primary,#00b0f4));
+        outline-width: 3px;
+    }
+
+    /* Nav item */
+    .side_b3f026 .item_b3f026,
+    .background_e681d1 {
+        line-height: 26px;
+        border-radius: 16px;
+        margin-bottom: 0;
+        padding-inline: var(--space-12);
+        &.selected_b3f026 {
+            background-color: var(--md-sys-color-secondary-container);
+            color: var(--md-sys-color-on-secondary-container);
+        }
+    }
+
+    &.full-motion .item_b3f026 {
+        transition: background-color 200ms ease;
+    }
+
+    /* Input placeholder */
+    ::placeholder {
+        color: var(--text-muted);
+        opacity: 1;
+    }
 }
 
-:root {
-    --md-sys-color-primary: rgb(246 188 112);
-    --md-sys-color-surface-tint: rgb(246 188 112);
-    --md-sys-color-on-primary: rgb(70 43 0);
-    --md-sys-color-primary-container: rgb(100 63 0);
-    --md-sys-color-on-primary-container: rgb(255 221 182);
-    --md-sys-color-secondary: rgb(222 194 162);
-    --md-sys-color-on-secondary: rgb(62 45 22);
-    --md-sys-color-secondary-container: rgb(87 67 43);
-    --md-sys-color-on-secondary-container: rgb(251 222 188);
-    --md-sys-color-tertiary: rgb(186 205 159);
-    --md-sys-color-on-tertiary: rgb(38 53 20);
-    --md-sys-color-tertiary-container: rgb(59 76 41);
-    --md-sys-color-on-tertiary-container: rgb(213 233 186);
+
+@keyframes outward-grow {
+    0% {
+        outline-width: 0;
+    }
+    
+    100% {
+        outline-width: var(--md-focus-ring-active-width, 8px);
+    }
+}
+@keyframes outward-shrink {
+    0% {
+        outline-width: var(--md-focus-ring-active-width, 8px);
+    }
+}
+
+/* Mention messsage hover */
+.message__5126c.replying__5126c.selected__5126c,
+.mouse-mode.full-motion .message__5126c.replying__5126c:hover,
+.mouse-mode.full-motion.visual-refresh .message__5126c.replying__5126c:hover,
+.visual-refresh .message__5126c.replying__5126c.selected__5126c {
+    background: var(--background-message-highlight-hover);
+}
+
+/* Inline mention hover */
+.interactive:hover {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+/* Side highlight */
+
+.replying__5126c:before {
+    background: var(--md-sys-color-primary);
+}
+
+/* Unread pill */
+.endCap__908e2 {
+    color: var(--md-extended-color-red-on-color);
+}
+
+/* Brand badge */
+[style*="background-color: var(--brand-500);"] {
+    background-color: var(--md-sys-color-primary) !important;
+    color: var(--md-sys-color-on-primary);
+}
+
+/* Success icon Inbox */
+.maskBackground_db811b[style*="background-color: var(--status-positive-background);"] > img {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* Accept friend request Inbox */
+.friendRequestContainer__6fddf .acceptButton__6fddf div[style*="color: white;"] {
+    color: inherit !important;
+}
+
+/* Source http://material-foundation.github.io/material-theme-builder?primary=%2300D8CB&custom%3Ared=%23FF7669&custom%3Agreen=%2373DB58&custom%3Ablue=%23529CFF&custom%3Ayellow=%23FFC643&custom%3Apurple=%23A55FF7&custom%3Apink=%23FF84CE&colorMatch=false */
+.visual-refresh:not(.theme-light) {
+    --md-sys-color-primary: rgb(129 213 204);
+    --md-sys-color-surface-tint: rgb(129 213 204);
+    --md-sys-color-on-primary: rgb(0 55 51);
+    --md-sys-color-primary-container: rgb(0 80 75);
+    --md-sys-color-on-primary-container: rgb(157 242 232);
+    --md-sys-color-secondary: rgb(177 204 200);
+    --md-sys-color-on-secondary: rgb(28 53 50);
+    --md-sys-color-secondary-container: rgb(50 75 72);
+    --md-sys-color-on-secondary-container: rgb(204 232 228);
+    --md-sys-color-tertiary: rgb(175 201 231);
+    --md-sys-color-on-tertiary: rgb(23 50 74);
+    --md-sys-color-tertiary-container: rgb(47 73 97);
+    --md-sys-color-on-tertiary-container: rgb(206 229 255);
     --md-sys-color-error: rgb(255 180 171);
     --md-sys-color-on-error: rgb(105 0 5);
     --md-sys-color-error-container: rgb(147 0 10);
     --md-sys-color-on-error-container: rgb(255 218 214);
-    --md-sys-color-background: rgb(24 18 12);
-    --md-sys-color-on-background: rgb(237 224 212);
-    --md-sys-color-surface: rgb(24 18 12);
-    --md-sys-color-on-surface: rgb(237 224 212);
-    --md-sys-color-surface-variant: rgb(79 69 57);
-    --md-sys-color-on-surface-variant: rgb(211 196 180);
-    --md-sys-color-outline: rgb(156 142 128);
-    --md-sys-color-outline-variant: rgb(79 69 57);
+    --md-sys-color-background: rgb(14 21 20);
+    --md-sys-color-on-background: rgb(221 228 226);
+    --md-sys-color-surface: rgb(14 21 20);
+    --md-sys-color-on-surface: rgb(221 228 226);
+    --md-sys-color-surface-variant: rgb(63 73 71);
+    --md-sys-color-on-surface-variant: rgb(190 201 198);
+    --md-sys-color-outline: rgb(137 147 145);
+    --md-sys-color-outline-variant: rgb(63 73 71);
     --md-sys-color-shadow: rgb(0 0 0);
     --md-sys-color-scrim: rgb(0 0 0);
-    --md-sys-color-inverse-surface: rgb(237 224 212);
-    --md-sys-color-inverse-on-surface: rgb(54 47 39);
-    --md-sys-color-inverse-primary: rgb(129 85 18);
-    --md-sys-color-primary-fixed: rgb(255 221 182);
-    --md-sys-color-on-primary-fixed: rgb(42 24 0);
-    --md-sys-color-primary-fixed-dim: rgb(246 188 112);
-    --md-sys-color-on-primary-fixed-variant: rgb(100 63 0);
-    --md-sys-color-secondary-fixed: rgb(251 222 188);
-    --md-sys-color-on-secondary-fixed: rgb(39 25 5);
-    --md-sys-color-secondary-fixed-dim: rgb(222 194 162);
-    --md-sys-color-on-secondary-fixed-variant: rgb(87 67 43);
-    --md-sys-color-tertiary-fixed: rgb(213 233 186);
-    --md-sys-color-on-tertiary-fixed: rgb(17 31 3);
-    --md-sys-color-tertiary-fixed-dim: rgb(186 205 159);
-    --md-sys-color-on-tertiary-fixed-variant: rgb(59 76 41);
-    --md-sys-color-surface-dim: rgb(24 18 12);
-    --md-sys-color-surface-bright: rgb(63 56 48);
-    --md-sys-color-surface-container-lowest: rgb(19 13 7);
-    --md-sys-color-surface-container-low: rgb(33 27 19);
-    --md-sys-color-surface-container: rgb(37 31 23);
-    --md-sys-color-surface-container-high: rgb(48 41 33);
-    --md-sys-color-surface-container-highest: rgb(59 52 43);
+    --md-sys-color-inverse-surface: rgb(221 228 226);
+    --md-sys-color-inverse-on-surface: rgb(43 50 49);
+    --md-sys-color-inverse-primary: rgb(0 106 99);
+    --md-sys-color-primary-fixed: rgb(157 242 232);
+    --md-sys-color-on-primary-fixed: rgb(0 32 29);
+    --md-sys-color-primary-fixed-dim: rgb(129 213 204);
+    --md-sys-color-on-primary-fixed-variant: rgb(0 80 75);
+    --md-sys-color-secondary-fixed: rgb(204 232 228);
+    --md-sys-color-on-secondary-fixed: rgb(5 31 29);
+    --md-sys-color-secondary-fixed-dim: rgb(177 204 200);
+    --md-sys-color-on-secondary-fixed-variant: rgb(50 75 72);
+    --md-sys-color-tertiary-fixed: rgb(206 229 255);
+    --md-sys-color-on-tertiary-fixed: rgb(0 29 51);
+    --md-sys-color-tertiary-fixed-dim: rgb(175 201 231);
+    --md-sys-color-on-tertiary-fixed-variant: rgb(47 73 97);
+    --md-sys-color-surface-dim: rgb(14 21 20);
+    --md-sys-color-surface-bright: rgb(52 58 57);
+    --md-sys-color-surface-container-lowest: rgb(9 15 15);
+    --md-sys-color-surface-container-low: rgb(22 29 28);
+    --md-sys-color-surface-container: rgb(26 33 32);
+    --md-sys-color-surface-container-high: rgb(37 43 42);
+    --md-sys-color-surface-container-highest: rgb(48 54 53);
     --md-extended-color-red-color: rgb(255 180 171);
     --md-extended-color-red-on-color: rgb(86 30 25);
     --md-extended-color-red-color-container: rgb(115 51 45);
@@ -408,8 +791,90 @@ fill: var(--md-sys-color-on-primary-container);
     --md-extended-color-yellow-on-color: rgb(64 45 0);
     --md-extended-color-yellow-color-container: rgb(92 67 0);
     --md-extended-color-yellow-on-color-container: rgb(255 222 161);
-    --md-extended-color-purple-color: rgb(216 186 250);
-    --md-extended-color-purple-on-color: rgb(60 36 90);
+    --md-extended-color-purple-color: rgb(217 186 250);
+    --md-extended-color-purple-on-color: rgb(61 36 90);
     --md-extended-color-purple-color-container: rgb(84 59 114);
     --md-extended-color-purple-on-color-container: rgb(238 219 255);
+    --md-extended-color-pink-color: rgb(251 177 216);
+    --md-extended-color-pink-on-color: rgb(81 29 62);
+    --md-extended-color-pink-color-container: rgb(107 52 85);
+    --md-extended-color-pink-on-color-container: rgb(255 216 234);
 }
+
+
+.visual-refresh.theme-light {
+    --md-sys-color-primary: rgb(0 106 99);
+    --md-sys-color-surface-tint: rgb(0 106 99);
+    --md-sys-color-on-primary: rgb(255 255 255);
+    --md-sys-color-primary-container: rgb(157 242 232);
+    --md-sys-color-on-primary-container: rgb(0 80 75);
+    --md-sys-color-secondary: rgb(74 99 96);
+    --md-sys-color-on-secondary: rgb(255 255 255);
+    --md-sys-color-secondary-container: rgb(204 232 228);
+    --md-sys-color-on-secondary-container: rgb(50 75 72);
+    --md-sys-color-tertiary: rgb(71 97 122);
+    --md-sys-color-on-tertiary: rgb(255 255 255);
+    --md-sys-color-tertiary-container: rgb(206 229 255);
+    --md-sys-color-on-tertiary-container: rgb(47 73 97);
+    --md-sys-color-error: rgb(186 26 26);
+    --md-sys-color-on-error: rgb(255 255 255);
+    --md-sys-color-error-container: rgb(255 218 214);
+    --md-sys-color-on-error-container: rgb(147 0 10);
+    --md-sys-color-background: rgb(244 251 249);
+    --md-sys-color-on-background: rgb(22 29 28);
+    --md-sys-color-surface: rgb(244 251 249);
+    --md-sys-color-on-surface: rgb(22 29 28);
+    --md-sys-color-surface-variant: rgb(218 229 226);
+    --md-sys-color-on-surface-variant: rgb(63 73 71);
+    --md-sys-color-outline: rgb(111 121 119);
+    --md-sys-color-outline-variant: rgb(190 201 198);
+    --md-sys-color-shadow: rgb(0 0 0);
+    --md-sys-color-scrim: rgb(0 0 0);
+    --md-sys-color-inverse-surface: rgb(43 50 49);
+    --md-sys-color-inverse-on-surface: rgb(236 242 240);
+    --md-sys-color-inverse-primary: rgb(129 213 204);
+    --md-sys-color-primary-fixed: rgb(157 242 232);
+    --md-sys-color-on-primary-fixed: rgb(0 32 29);
+    --md-sys-color-primary-fixed-dim: rgb(129 213 204);
+    --md-sys-color-on-primary-fixed-variant: rgb(0 80 75);
+    --md-sys-color-secondary-fixed: rgb(204 232 228);
+    --md-sys-color-on-secondary-fixed: rgb(5 31 29);
+    --md-sys-color-secondary-fixed-dim: rgb(177 204 200);
+    --md-sys-color-on-secondary-fixed-variant: rgb(50 75 72);
+    --md-sys-color-tertiary-fixed: rgb(206 229 255);
+    --md-sys-color-on-tertiary-fixed: rgb(0 29 51);
+    --md-sys-color-tertiary-fixed-dim: rgb(175 201 231);
+    --md-sys-color-on-tertiary-fixed-variant: rgb(47 73 97);
+    --md-sys-color-surface-dim: rgb(213 219 217);
+    --md-sys-color-surface-bright: rgb(244 251 249);
+    --md-sys-color-surface-container-lowest: rgb(255 255 255);
+    --md-sys-color-surface-container-low: rgb(239 245 243);
+    --md-sys-color-surface-container: rgb(233 239 237);
+    --md-sys-color-surface-container-high: rgb(227 233 231);
+    --md-sys-color-surface-container-highest: rgb(221 228 226);
+    --md-extended-color-red-color: rgb(144 74 67);
+    --md-extended-color-red-on-color: rgb(255 255 255);
+    --md-extended-color-red-color-container: rgb(255 218 214);
+    --md-extended-color-red-on-color-container: rgb(115 51 45);
+    --md-extended-color-green-color: rgb(65 104 53);
+    --md-extended-color-green-on-color: rgb(255 255 255);
+    --md-extended-color-green-color-container: rgb(194 239 174);
+    --md-extended-color-green-on-color-container: rgb(42 79 31);
+    --md-extended-color-blue-color: rgb(62 95 144);
+    --md-extended-color-blue-on-color: rgb(255 255 255);
+    --md-extended-color-blue-color-container: rgb(213 227 255);
+    --md-extended-color-blue-on-color-container: rgb(36 71 119);
+    --md-extended-color-yellow-color: rgb(120 89 12);
+    --md-extended-color-yellow-on-color: rgb(255 255 255);
+    --md-extended-color-yellow-color-container: rgb(255 222 161);
+    --md-extended-color-yellow-on-color-container: rgb(92 67 0);
+    --md-extended-color-purple-color: rgb(109 83 139);
+    --md-extended-color-purple-on-color: rgb(255 255 255);
+    --md-extended-color-purple-color-container: rgb(238 219 255);
+    --md-extended-color-purple-on-color-container: rgb(84 59 114);
+    --md-extended-color-pink-color: rgb(135 75 110);
+    --md-extended-color-pink-on-color: rgb(255 255 255);
+    --md-extended-color-pink-color-container: rgb(255 216 234);
+    --md-extended-color-pink-on-color-container: rgb(107 52 85);
+}
+  
