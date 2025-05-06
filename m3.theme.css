@@ -180,7 +180,7 @@
     --button-positive-background-disabled: color-mix(in oklab, var(--button-positive-background), transparent var(--disabled));
     --button-positive-border: var(--button-border);
 
-    --button-secondary-background: var(--md-sys-color-surface-container);
+    --button-secondary-background: var(--md-sys-color-surface-container-highest);
     --button-secondary-background-hover: color-mix(in oklab, var(--button-secondary-background), currentColor var(--hover));
     --button-secondary-background-active: color-mix(in oklab, var(--button-secondary-background), currentColor var(--active));
     --button-secondary-background-disabled: color-mix(in oklab, var(--button-secondary-background), transparent var(--disabled));
@@ -508,15 +508,12 @@
         &.sizeMedium__201d5,
         &.sizeLarge__201d5,
         &.icon_fb7f94 {
-            border-radius: 40px;
+            border-radius: var(--radius-round);
         }
 
         /* Copy btn */
         &.button_fffc15 {
             padding: var(--space-4) var(--space-sm) !important;
-        }
-        &.attachButton__0923f {
-            padding: var(--space-12) var(--space-16);
         }
 
         /* Nitro btn */
@@ -629,6 +626,256 @@
             pointer-events: all;
         }
     }
+
+    /* Message bar */
+    .channelTextArea__74017 {
+        border-radius: 27px;
+    }
+    .inner__74017 {
+        padding: 0 var(--space-10);
+    }
+    .buttons__74017 {
+        gap: var(--space-8)
+    }
+    .scrollableContainer__74017 {
+        border-radius: inherit;
+        margin-inline-end: 0;
+        scrollbar-width: none;
+        .button__201d5 {
+            &.attachButton__0923f {
+                padding-inline: var(--space-16) var(--space-4);
+            }
+            .contents__201d5 {
+                width: 32px;
+                height: 32px;
+                position: relative;
+                color: var(--interactive-normal);
+                
+                .spriteContainer__04eed,
+                &.attachButtonInner__0923f > svg {
+                    margin: 6px;
+                    --custom-emoji-sprite-size: 20px !important;
+                }
+                &::before, &::after {
+                    content: '';
+                    border-radius: inherit;
+                    position: absolute;
+                    pointer-events: all;
+                }
+                &::before {
+                    border-radius: var(--radius-round);
+                    
+                    inset: -4px;
+                    z-index: -1;
+                    transition: 75ms opacity ease;
+                    background: currentColor;
+                    opacity: 0;
+                }
+                &::after {
+                    inset: -8px -4px;
+                }
+                &:hover::before {
+                    opacity: var(--hover);
+                }
+            }
+            &[aria-expanded="true"], &.active__24af7 {
+                .contents__201d5 {
+                    &::before {
+                        opacity: var(--active);
+                    }
+                    &, .buttonWrapper__24af7 {
+                        color: var(--md-sys-color-primary);
+                    }
+                }
+            }
+        }
+    }
+
+    /* Expression picker */
+    --custom-gif-picker-gutter-size: var(--space-10) 8px 8px 8px;
+    --custom-gif-picker-search-results-desired-item-width: 160px;
+
+    --custom-emoji-picker-constants-unicode-category-icon-padding: 4px 8px;
+    --custom-emoji-picker-constants-guild-category-icon-size: 40px;
+    --custom-stickers-constants-sticker-category-icon-size: auto;
+    --custom-stickers-constants-guild-category-icon-size: 40px;
+
+    /* Nav bar */
+    .navButton__08434 {
+        border-radius: var(--radius-round);
+        padding: var(--space-6) var(--space-12);
+        &.navButtonActive__08434 {
+            background-color: var(--md-sys-color-primary-container);
+            color: var(--md-sys-color-on-primary-container);
+        }
+    }
+
+    .nav__08434 {
+        padding: 0 var(--space-xs);
+    }
+
+    .navList__08434 {
+        /* gap: var(--space-xs) */
+    }
+
+    .navItem__08434 {
+        /* flex-grow: 1; */
+    }
+
+    .navItem__08434+.navItem__08434 {
+        margin-left: 0
+    }
+
+    .contentWrapper__08434 {
+        padding-block-start: var(--space-xs);
+        .medium_a45028 {
+            height: 36px;
+            border-radius: var(--radius-round);
+        }
+        .container_a45028 {
+            outline: 2px solid transparent;
+            border-width: 0;
+            background-color: var(--md-sys-color-surface-dim);
+            &:focus-within {
+                outline-color: var(--md-sys-color-primary);
+            }
+            .inner_a45028 {
+                padding: 0 var(--space-10);
+            }
+        }
+        .inner_a45028 {
+            flex-direction: row-reverse;
+            gap: var(--space-6);
+        }
+    }
+
+    .wrapper__4e6ce {
+        background-color: var(--bg-surface-overlay);
+    }
+
+    /* Emoji */
+    .categoryItem_b9ee0c,
+    /* Stickers */
+    .stickerCategory__3ad28
+    {
+        position: relative;
+        border-radius: var(--radius-md);
+        translate: -4px 0;
+        &::after {
+            content: '';
+            border-radius: 3px 0 0 3px;
+            inset-block: 8px;
+            inset-inline-end: -2px;
+            width: 3px;
+            position: absolute;
+            pointer-events: none;
+            background-color: var(--md-sys-color-primary);
+            
+            opacity: 0;
+            scale: 1 0;
+            transition: 200ms opacity ease, 200ms scale ease;
+        }
+
+        &:hover {
+            &::after {
+                opacity: 0.5;
+                scale: 1 0.8;
+            }    
+        }
+
+        &.stickerCategory__3ad28:not(.stickerCategoryGeneric__3ad28)::after {
+            translate: 8px 0;
+        }
+        
+        &.categoryItemGuildCategory_b9ee0c,
+        &.categoryItemPackCategory_b9ee0c,
+        &.stickerCategory__3ad28:not(.stickerCategoryGeneric__3ad28) {
+            height: 32px;
+            div:first-of-type {
+                transition: 200ms scale ease;
+                transform: translateX(4px);
+                scale: var(--icon-scale, 0.875);
+            }
+
+            .categoryItemLockIconContainer__0fa6d {
+                inset: auto 8px -2px auto;
+            }
+
+            &:has([mask="url(#svg-mask-squircle)"]) {
+                --icon-scale: 1;
+                &:hover {
+                    &::after {
+                        opacity: 0.5;
+                        scale: 1 0.8;
+                    }    
+                }
+                &::after {
+                    opacity: 1;
+                    scale: 1;
+                }
+            }
+        }
+    }
+    
+    /* Emoji */
+    .categoryItemDefaultCategory_b9ee0c,
+    /* Stickers */
+    .stickerCategoryGeneric__3ad28 {
+        width: 40px;
+        height: 34px;
+        box-sizing: border-box;
+        padding: var(--custom-emoji-picker-constants-unicode-category-icon-padding);
+        
+        /* Emoji */
+        .categoryIcon_b9ee0c,
+        /* Stickers */
+        .stickerCategoryGenericIcon__3ad28 {
+            color: var(--md-sys-color-outline);
+            transition: 200ms color ease;
+        }
+
+        /* Emoji */
+        &.categoryItemDefaultCategorySelected_b9ee0c,
+        /* Stickers */
+        &.firstPartyCategorySelected__3ad28,
+        &.firstPartyCategorySelected__3ad28:hover,
+        &.stickerCategoryGenericSelected__3ad28,
+        &.stickerCategoryGenericSelected__3ad28:hover {
+            background-color: color-mix(in oklab, transparent, var(--md-sys-color-primary) var(--active));
+            &:hover {
+                background-color: color-mix(in oklab, transparent, var(--md-sys-color-primary) calc(var(--active) + var(--hover)));
+            }
+
+            &,
+            /* Emoji */
+            .categoryIcon_b9ee0c,
+            /* Stickers */
+            .stickerCategoryGenericIcon__3ad28 {
+                color: var(--md-sys-color-primary);
+            }
+
+            &::after {
+                opacity: 1;
+                scale: 1;
+            }
+        }
+    }
+
+    /* Main side scroller list */
+    .listItems_affa7e {
+        /* top: 0 !important; */
+    }
+
+    /* Category header */
+    .wrapper__14245 {
+        padding-left: var(--space-xs);
+    }
+
+    /* Row */
+    .emojiListRow_fc7141 {
+        padding-left: var(--space-xxs);
+    }
+
 
     /* GM3/MD focus ring */
     .focus-rings-ring {
