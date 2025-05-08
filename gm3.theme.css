@@ -1,0 +1,162 @@
+/**
+ * @name GM3 Colours
+ * @description Google M3 colours for Discord (Apply on top of M3)
+ * @author WalkQuackBack
+ * @version 0.0.0
+*/
+
+/* Harmonize source: https://material-foundation.github.io/material-theme-builder/?primary=%2300D8CB&custom%3Ared=%23FF7669&custom%3Agreen=%2373DB58&custom%3Ablue=%23529CFF&custom%3Ayellow=%23FFC643&custom%3Apurple=%23A55FF7&custom%3Apink=%23FF84CE&colorMatch=false */
+
+.visual-refresh:not(.theme-light) {
+    --md-sys-color-background: #131314;
+    --md-sys-color-error: #f2b8b5;
+    --md-sys-color-error-container: #8c1d18;
+    --md-sys-color-inverse-on-surface: #303030;
+    --md-sys-color-inverse-primary: #0b57d0;
+    --md-sys-color-inverse-surface: #e3e3e3;
+    --md-sys-color-on-background: #e3e3e3;
+    --md-sys-color-on-error: #601410;
+    --md-sys-color-on-error-container: #f9dedc;
+    --md-sys-color-on-primary: #062e6f;
+    --md-sys-color-on-primary-container: #d3e3fd;
+    --md-sys-color-on-primary-fixed: #041e49;
+    --md-sys-color-on-primary-fixed-variant: #0842a0;
+    --md-sys-color-on-secondary: #035;
+    --md-sys-color-on-secondary-container: #c2e7ff;
+    --md-sys-color-on-secondary-fixed: #001d35;
+    --md-sys-color-on-secondary-fixed-variant: #004a77;
+    --md-sys-color-on-surface: #e3e3e3;
+    --md-sys-color-on-surface-variant: #c4c7c5;
+    --md-sys-color-on-tertiary: #0a3818;
+    --md-sys-color-on-tertiary-container: #c4eed0;
+    --md-sys-color-on-tertiary-fixed: #072711;
+    --md-sys-color-on-tertiary-fixed-variant: #0f5223;
+    --md-sys-color-outline: #8e918f;
+    --md-sys-color-outline-variant: #444746;
+    --md-sys-color-primary: #a8c7fa;
+    --md-sys-color-primary-container: #0842a0;
+    --md-sys-color-primary-fixed: #d3e3fd;
+    --md-sys-color-primary-fixed-dim: #a8c7fa;
+    --md-sys-color-scrim: #000;
+    --md-sys-color-secondary: #7fcfff;
+    --md-sys-color-secondary-container: #004a77;
+    --md-sys-color-secondary-fixed: #c2e7ff;
+    --md-sys-color-secondary-fixed-dim: #7fcfff;
+    --md-sys-color-shadow: #000;
+    --md-sys-color-surface: #131314;
+    --md-sys-color-surface-bright: #37393b;
+    --md-sys-color-surface-container: #1e1f20;
+    --md-sys-color-surface-container-high: #282a2c;
+    --md-sys-color-surface-container-highest: #333537;
+    --md-sys-color-surface-container-low: #1b1b1b;
+    --md-sys-color-surface-container-lowest: #0e0e0e;
+    --md-sys-color-surface-dim: #131314;
+    --md-sys-color-surface-tint: #d1e1ff;
+    --md-sys-color-surface-variant: #444746;
+    --md-sys-color-tertiary: #6dd58c;
+    --md-sys-color-tertiary-container: #0f5223;
+    --md-sys-color-tertiary-fixed: #c4eed0;
+    --md-sys-color-tertiary-fixed-dim: #6dd58c;
+    --md-extended-color-red-color: rgb(255 180 171);
+    --md-extended-color-red-on-color: rgb(103 3 6);
+    --md-extended-color-red-color-container: rgb(255 118 105);
+    --md-extended-color-red-on-color-container: rgb(113 12 12);
+    --md-extended-color-green-color: rgb(142 248 113);
+    --md-extended-color-green-on-color: rgb(6 57 0);
+    --md-extended-color-green-color-container: rgb(115 219 88);
+    --md-extended-color-green-on-color-container: rgb(15 94 0);
+    --md-extended-color-blue-color: rgb(167 200 255);
+    --md-extended-color-blue-on-color: rgb(0 48 97);
+    --md-extended-color-blue-color-container: rgb(82 156 255);
+    --md-extended-color-blue-on-color-container: rgb(0 51 101);
+    --md-extended-color-yellow-color: rgb(255 232 192);
+    --md-extended-color-yellow-on-color: rgb(64 45 0);
+    --md-extended-color-yellow-color-container: rgb(255 198 67);
+    --md-extended-color-yellow-on-color-container: rgb(113 83 0);
+    --md-extended-color-purple-color: rgb(218 185 255);
+    --md-extended-color-purple-on-color: rgb(71 0 132);
+    --md-extended-color-purple-color-container: rgb(177 112 255);
+    --md-extended-color-purple-on-color-container: rgb(43 0 84);
+    --md-extended-color-pink-color: rgb(255 179 220);
+    --md-extended-color-pink-on-color: rgb(97 0 71);
+    --md-extended-color-pink-color-container: rgb(255 132 206);
+    --md-extended-color-pink-on-color-container: rgb(122 18 91);
+}
+
+
+.visual-refresh.theme-light {
+    --md-color-background: #fff;
+    --md-color-error: #b3261e;
+    --md-color-error-container: #f9dedc;
+    --md-color-inverse-on-surface: #f2f2f2;
+    --md-color-inverse-primary: #a8c7fa;
+    --md-color-inverse-surface: #303030;
+    --md-color-on-background: #1f1f1f;
+    --md-color-on-error: #fff;
+    --md-color-on-error-container: #410e0b;
+    --md-color-on-primary: #fff;
+    --md-color-on-primary-container: #041e49;
+    --md-color-on-primary-fixed: #041e49;
+    --md-color-on-primary-fixed-variant: #0842a0;
+    --md-color-on-secondary: #fff;
+    --md-color-on-secondary-container: #001d35;
+    --md-color-on-secondary-fixed: #001d35;
+    --md-color-on-secondary-fixed-variant: #004a77;
+    --md-color-on-surface: #1f1f1f;
+    --md-color-on-surface-variant: #444746;
+    --md-color-on-tertiary: #fff;
+    --md-color-on-tertiary-container: #072711;
+    --md-color-on-tertiary-fixed: #072711;
+    --md-color-on-tertiary-fixed-variant: #0f5223;
+    --md-color-outline: #747775;
+    --md-color-outline-variant: #c4c7c5;
+    --md-color-primary: #0b57d0;
+    --md-color-primary-container: #d3e3fd;
+    --md-color-primary-fixed: #d3e3fd;
+    --md-color-primary-fixed-dim: #a8c7fa;
+    --md-color-scrim: #000;
+    --md-color-secondary: #00639b;
+    --md-color-secondary-container: #c2e7ff;
+    --md-color-secondary-fixed: #c2e7ff;
+    --md-color-secondary-fixed-dim: #7fcfff;
+    --md-color-shadow: #000;
+    --md-color-surface: #fff;
+    --md-color-surface-bright: #fff;
+    --md-color-surface-container: #f0f4f9;
+    --md-color-surface-container-high: #e9eef6;
+    --md-color-surface-container-highest: #dde3ea;
+    --md-color-surface-container-low: #f8fafd;
+    --md-color-surface-container-lowest: #fff;
+    --md-color-surface-dim: #d3dbe5;
+    --md-color-surface-tint: #6991d6;
+    --md-color-surface-variant: #e1e3e1;
+    --md-color-tertiary: #146c2e;
+    --md-color-tertiary-container: #c4eed0;
+    --md-color-tertiary-fixed: #c4eed0;
+    --md-color-tertiary-fixed-dim: #6dd58c;
+    --md-extended-color-red-color: rgb(169 54 46);
+    --md-extended-color-red-on-color: rgb(255 255 255);
+    --md-extended-color-red-color-container: rgb(255 118 105);
+    --md-extended-color-red-on-color-container: rgb(113 12 12);
+    --md-extended-color-green-color: rgb(19 110 0);
+    --md-extended-color-green-on-color: rgb(255 255 255);
+    --md-extended-color-green-color-container: rgb(115 219 88);
+    --md-extended-color-green-on-color-container: rgb(15 94 0);
+    --md-extended-color-blue-color: rgb(0 94 179);
+    --md-extended-color-blue-on-color: rgb(255 255 255);
+    --md-extended-color-blue-color-container: rgb(82 156 255);
+    --md-extended-color-blue-on-color-container: rgb(0 51 101);
+    --md-extended-color-yellow-color: rgb(121 89 0);
+    --md-extended-color-yellow-on-color: rgb(255 255 255);
+    --md-extended-color-yellow-color-container: rgb(255 198 67);
+    --md-extended-color-yellow-on-color-container: rgb(113 83 0);
+    --md-extended-color-purple-color: rgb(123 48 203);
+    --md-extended-color-purple-on-color: rgb(255 255 255);
+    --md-extended-color-purple-color-container: rgb(149 78 230);
+    --md-extended-color-purple-on-color-container: rgb(255 251 255);
+    --md-extended-color-pink-color: rgb(159 52 122);
+    --md-extended-color-pink-on-color: rgb(255 255 255);
+    --md-extended-color-pink-color-container: rgb(255 132 206);
+    --md-extended-color-pink-on-color-container: rgb(122 18 91);
+}
+  
