@@ -375,14 +375,25 @@
         background-color: var(--background-feedback-critical);
     }
 
-    /* Info banner */
+    /* Info/Unread banner */
+    .notice__30f28,
+    .newTopicsBarContainer__0f481,
+    .newMessagesBar__0f481 {
+        background: var(--custom-notice-background);
+        color: var(--custom-notice-text);
+    }
+    
     .notice__30f28,
     .newTopicsBarContainer__0f481 {
         --custom-notice-background: var(--md-sys-color-tertiary-container);
         --custom-notice-text: var(--md-sys-color-on-tertiary-container);
-        background: var(--custom-notice-background);
-        color: var(--custom-notice-text);
     }
+
+    .newMessagesBar__0f481 {
+        --custom-notice-background: var(--md-sys-color-primary-container);
+        --custom-notice-text: var(--md-sys-color-on-primary-container);
+    }
+    
     .header__30f28,
     .newTopicsBarText__0f481 {
         color: inherit;
