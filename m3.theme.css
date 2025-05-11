@@ -185,7 +185,7 @@
     --button-positive-background-disabled: color-mix(in oklab, var(--button-positive-background), transparent var(--disabled));
     --button-positive-border: var(--button-border);
 
-    --button-secondary-background: var(--md-sys-color-surface-container-high);
+    --button-secondary-background: transparent;
     --button-secondary-background-hover: color-mix(in oklab, var(--button-secondary-background), currentColor var(--hover));
     --button-secondary-background-active: color-mix(in oklab, var(--button-secondary-background), currentColor var(--active));
     --button-secondary-background-disabled: color-mix(in oklab, var(--button-secondary-background), transparent var(--disabled));
