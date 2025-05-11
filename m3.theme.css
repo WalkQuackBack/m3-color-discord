@@ -736,6 +736,11 @@
         margin-inline-end: 0;
         scrollbar-width: none;
     }
+    /* Message bar floating bar */
+    .floatingBars__74017:empty+.stackedBars__74017:nth-child(2), .stackedBars__74017:first-child {
+        border-top-left-radius: 27px;
+        border-top-right-radius: 27px;
+    }
 
     /* Buttons */
 
