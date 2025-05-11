@@ -185,7 +185,7 @@
     --button-positive-background-disabled: color-mix(in oklab, var(--button-positive-background), transparent var(--disabled));
     --button-positive-border: var(--button-border);
 
-    --button-secondary-background: var(--md-sys-color-surface-container-highest);
+    --button-secondary-background: var(--md-sys-color-surface-container-high);
     --button-secondary-background-hover: color-mix(in oklab, var(--button-secondary-background), currentColor var(--hover));
     --button-secondary-background-active: color-mix(in oklab, var(--button-secondary-background), currentColor var(--active));
     --button-secondary-background-disabled: color-mix(in oklab, var(--button-secondary-background), transparent var(--disabled));
@@ -386,6 +386,11 @@
     .header__30f28,
     .newTopicsBarText__0f481 {
         color: inherit;
+    }
+
+    /* Settings page sidebar */
+    .sidebarRegionScroller__23e6b {
+        background-color: var(--background-surface-high);
     }
 
     /* Join this server banner */
