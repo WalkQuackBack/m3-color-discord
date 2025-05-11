@@ -19,6 +19,8 @@
 
     --tint: 80%;
     --scrim: 70%;
+
+    --ghost: 95%;
     
     /* Theme vars */
     --hover-generic: color-mix(in oklab, transparent, var(--md-sys-color-on-surface) var(--hover));
@@ -185,7 +187,7 @@
     --button-positive-background-disabled: color-mix(in oklab, var(--button-positive-background), transparent var(--disabled));
     --button-positive-border: var(--button-border);
 
-    --button-secondary-background: transparent;
+    --button-secondary-background: color-mix(in oklab, var(--md-sys-color-on-surface), transparent var(--ghost));
     --button-secondary-background-hover: color-mix(in oklab, var(--button-secondary-background), currentColor var(--hover));
     --button-secondary-background-active: color-mix(in oklab, var(--button-secondary-background), currentColor var(--active));
     --button-secondary-background-disabled: color-mix(in oklab, var(--button-secondary-background), transparent var(--disabled));
