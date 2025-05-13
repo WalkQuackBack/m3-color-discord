@@ -79,7 +79,7 @@
     --bg-base-secondary: var(--background-base-lower);
     --bg-base-tertiary: var(--background-base-lowest);
     
-    --bg-overlay-chat: var(--background-base-low);
+    --bg-overlay-chat: var(--background-base-lowest);
     --bg-backdrop: color-mix(in oklab, transparent, var(--md-sys-color-scrim) var(--scrim));
 
     --background-surface-highest: var(--md-sys-color-surface-container-highest);
@@ -303,7 +303,7 @@
     --message-reacted-text: var(--md-sys-color-primary);
     --message-reacted-background: var(--background-message-highlight);
 
-    /* --custom-channel-members-bg: var(--bg-4); */
+    --custom-channel-members-bg: var(--background-base-low);
 
     --redesign-input-control-selected: var(--md-sys-color-primary);
     --checkbox-background-checked: var(--md-sys-color-primary);
@@ -349,6 +349,23 @@
 }
 
 .visual-refresh.visual-refresh.visual-refresh {
+    /* Main layout */
+    /* Server list */
+    .wrapper_ef3116 {
+        background-color: var(--background-surface-high);
+    }
+    /* Channel list */
+    .container__2637a {
+        background: var(--background-base-low);
+    }
+    /* User list */
+    .members_c8ffbb {
+        background: var(--custom-channel-members-bg);
+        flex: 0 0 auto;
+        height: auto;
+        padding: 0 0 10px;
+    }
+    
     .lookFilled__201d5 {
         &.colorGreen__201d5 {
             color: var(--md-extended-color-green-on-color);
