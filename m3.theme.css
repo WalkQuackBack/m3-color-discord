@@ -355,7 +355,9 @@
         background-color: var(--background-surface-high);
     }
     /* Channel list */
-    .container__2637a {
+    .container__2637a,
+    /* DM channel list */
+    .scroller__99e7c {
         background: var(--background-base-low);
     }
     /* User list */
