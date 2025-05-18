@@ -1,0 +1,173 @@
+/**
+ * @name Amoled Colours
+ * @description Amoled M3 colours for Discord (Apply on top of M3)
+ * @author WalkQuackBack
+ * @version 0.0.0
+*/
+
+/* Harmonize source: https://material-foundation.github.io/material-theme-builder/?primary=%2300D8CB&custom%3Ared=%23FF7669&custom%3Agreen=%2373DB58&custom%3Ablue=%23529CFF&custom%3Ayellow=%23FFC643&custom%3Apurple=%23A55FF7&custom%3Apink=%23FF84CE&colorMatch=false */
+
+:root {
+    --tint: 80%
+}
+
+.visual-refresh:not(.theme-light) {
+    --md-sys-color-primary: rgb(255 255 255);
+    --md-sys-color-surface-tint: rgb(198 198 198);
+    --md-sys-color-on-primary: rgb(0, 0, 0);
+    --md-sys-color-primary-container: rgb(80 80 80);
+    --md-sys-color-on-primary-container: rgb(212 212 212);
+    --md-sys-color-secondary: rgb(198 198 198);
+    --md-sys-color-on-secondary: rgb(48 48 48);
+    --md-sys-color-secondary-container: rgb(71 71 71);
+    --md-sys-color-on-secondary-container: rgb(212 212 212);
+    --md-sys-color-tertiary: rgb(255 255 255);
+    --md-sys-color-on-tertiary: rgb(0 0 0);
+    --md-sys-color-tertiary-container: rgb(80 80 80);
+    --md-sys-color-on-tertiary-container: rgb(212 212 212);
+    --md-sys-color-error: rgb(255 180 171);
+    --md-sys-color-on-error: rgb(105 0 5);
+    --md-sys-color-error-container: rgb(147 0 10);
+    --md-sys-color-on-error-container: rgb(255 218 214);
+    --md-sys-color-background: rgb(0 0 0);
+    --md-sys-color-on-background: rgb(226 226 226);
+    --md-sys-color-surface: rgb(0 0 0);
+    --md-sys-color-on-surface: rgb(226 226 226);
+    --md-sys-color-surface-variant: rgb(76 69 70);
+    --md-sys-color-on-surface-variant: rgb(207 196 197);
+    --md-sys-color-outline: rgb(152 142 144);
+    --md-sys-color-outline-variant: rgb(76 69 70);
+    --md-sys-color-shadow: rgb(0 0 0);
+    --md-sys-color-scrim: rgb(0 0 0);
+
+    --md-sys-color-inverse-surface: rgb(226 226 226);
+    --md-sys-color-inverse-on-surface: rgb(48 48 48);
+    --md-sys-color-inverse-primary: rgb(94 94 94);
+
+    --md-sys-color-primary-fixed: rgb(255 255 255);
+    --md-sys-color-on-primary-fixed: rgb(27 27 27);
+    --md-sys-color-primary-fixed-dim: rgb(198 198 198);
+    --md-sys-color-on-primary-fixed-variant: rgb(71 71 71);
+    --md-sys-color-secondary-fixed: rgb(226 226 226);
+    --md-sys-color-on-secondary-fixed: rgb(27 27 27);
+    --md-sys-color-secondary-fixed-dim: rgb(198 198 198);
+    --md-sys-color-on-secondary-fixed-variant: rgb(71 71 71);
+    --md-sys-color-tertiary-fixed: rgb(226 226 226);
+    --md-sys-color-on-tertiary-fixed: rgb(27 27 27);
+    --md-sys-color-tertiary-fixed-dim: rgb(198 198 198);
+    --md-sys-color-on-tertiary-fixed-variant: rgb(71 71 71);
+    
+    --md-sys-color-surface-dim: rgb(19 19 19);
+    --md-sys-color-surface-bright: rgb(57 57 57);
+    --md-sys-color-surface-container-lowest: rgb(0 0 0);
+    --md-sys-color-surface-container-low: rgb(6 6 6);
+    --md-sys-color-surface-container: rgb(8 8 8);
+    --md-sys-color-surface-container-high: rgb(14 14 14);
+    --md-sys-color-surface-container-highest: rgb(19 19 19);
+
+    --md-extended-color-red-color: rgb(255 180 171);
+    --md-extended-color-red-on-color: rgb(103 3 6);
+    --md-extended-color-red-color-container: rgb(255 118 105);
+    --md-extended-color-red-on-color-container: rgb(113 12 12);
+    --md-extended-color-green-color: rgb(142 248 113);
+    --md-extended-color-green-on-color: rgb(6 57 0);
+    --md-extended-color-green-color-container: rgb(115 219 88);
+    --md-extended-color-green-on-color-container: rgb(15 94 0);
+    --md-extended-color-blue-color: rgb(167 200 255);
+    --md-extended-color-blue-on-color: rgb(0 48 97);
+    --md-extended-color-blue-color-container: rgb(82 156 255);
+    --md-extended-color-blue-on-color-container: rgb(0 51 101);
+    --md-extended-color-yellow-color: rgb(255 232 192);
+    --md-extended-color-yellow-on-color: rgb(64 45 0);
+    --md-extended-color-yellow-color-container: rgb(255 198 67);
+    --md-extended-color-yellow-on-color-container: rgb(113 83 0);
+    --md-extended-color-purple-color: rgb(218 185 255);
+    --md-extended-color-purple-on-color: rgb(71 0 132);
+    --md-extended-color-purple-color-container: rgb(177 112 255);
+    --md-extended-color-purple-on-color-container: rgb(43 0 84);
+    --md-extended-color-pink-color: rgb(255 179 220);
+    --md-extended-color-pink-on-color: rgb(97 0 71);
+    --md-extended-color-pink-color-container: rgb(255 132 206);
+    --md-extended-color-pink-on-color-container: rgb(122 18 91);
+}
+
+
+.visual-refresh.theme-light {
+    --md-sys-color-primary: rgb(0 0 0);
+    --md-sys-color-surface-tint: rgb(94 94 94);
+    --md-sys-color-on-primary: rgb(255 255 255);
+    --md-sys-color-primary-container: rgb(27 27 27);
+    --md-sys-color-on-primary-container: rgb(202 202 202);
+    --md-sys-color-secondary: rgb(94 94 94);
+    --md-sys-color-on-secondary: rgb(255 255 255);
+    --md-sys-color-secondary-container: rgb(226 226 226);
+    --md-sys-color-on-secondary-container: rgb(30 30 30);
+    --md-sys-color-tertiary: rgb(0 0 0);
+    --md-sys-color-on-tertiary: rgb(255 255 255);
+    --md-sys-color-tertiary-container: rgb(27 27 27);
+    --md-sys-color-on-tertiary-container: rgb(202 202 202);
+    --md-sys-color-error: rgb(186 26 26);
+    --md-sys-color-on-error: rgb(255 255 255);
+    --md-sys-color-error-container: rgb(255 218 214);
+    --md-sys-color-on-error-container: rgb(147 0 10);
+    --md-sys-color-background: rgb(249 249 249);
+    --md-sys-color-on-background: rgb(27 27 27);
+    --md-sys-color-surface: rgb(249 249 249);
+    --md-sys-color-on-surface: rgb(27 27 27);
+    --md-sys-color-surface-variant: rgb(235 224 225);
+    --md-sys-color-on-surface-variant: rgb(76 69 70);
+    --md-sys-color-outline: rgb(126 117 118);
+    --md-sys-color-outline-variant: rgb(207 196 197);
+    --md-sys-color-shadow: rgb(0 0 0);
+    --md-sys-color-scrim: rgb(0 0 0);
+
+    --md-sys-color-inverse-surface: rgb(48 48 48);
+    --md-sys-color-inverse-on-surface: rgb(241 241 241);
+    --md-sys-color-inverse-primary: rgb(198 198 198);
+
+    --md-sys-color-primary-fixed: rgb(226 226 226);
+    --md-sys-color-on-primary-fixed: rgb(27 27 27);
+    --md-sys-color-primary-fixed-dim: rgb(198 198 198);
+    --md-sys-color-on-primary-fixed-variant: rgb(71 71 71);
+    --md-sys-color-secondary-fixed: rgb(226 226 226);
+    --md-sys-color-on-secondary-fixed: rgb(27 27 27);
+    --md-sys-color-secondary-fixed-dim: rgb(198 198 198);
+    --md-sys-color-on-secondary-fixed-variant: rgb(71 71 71);
+    --md-sys-color-tertiary-fixed: rgb(226 226 226);
+    --md-sys-color-on-tertiary-fixed: rgb(27 27 27);
+    --md-sys-color-tertiary-fixed-dim: rgb(198 198 198);
+    --md-sys-color-on-tertiary-fixed-variant: rgb(71 71 71);
+
+    --md-sys-color-surface-dim: rgb(218 218 218);
+    --md-sys-color-surface-bright: rgb(249 249 249);
+    --md-sys-color-surface-container-lowest: rgb(255 255 255);
+    --md-sys-color-surface-container-low: rgb(243 243 243);
+    --md-sys-color-surface-container: rgb(238 238 238);
+    --md-sys-color-surface-container-high: rgb(232 232 232);
+    --md-sys-color-surface-container-highest: rgb(226 226 226);
+
+    --md-extended-color-red-color: rgb(169 54 46);
+    --md-extended-color-red-on-color: rgb(255 255 255);
+    --md-extended-color-red-color-container: rgb(255 118 105);
+    --md-extended-color-red-on-color-container: rgb(113 12 12);
+    --md-extended-color-green-color: rgb(19 110 0);
+    --md-extended-color-green-on-color: rgb(255 255 255);
+    --md-extended-color-green-color-container: rgb(115 219 88);
+    --md-extended-color-green-on-color-container: rgb(15 94 0);
+    --md-extended-color-blue-color: rgb(0 94 179);
+    --md-extended-color-blue-on-color: rgb(255 255 255);
+    --md-extended-color-blue-color-container: rgb(82 156 255);
+    --md-extended-color-blue-on-color-container: rgb(0 51 101);
+    --md-extended-color-yellow-color: rgb(121 89 0);
+    --md-extended-color-yellow-on-color: rgb(255 255 255);
+    --md-extended-color-yellow-color-container: rgb(255 198 67);
+    --md-extended-color-yellow-on-color-container: rgb(113 83 0);
+    --md-extended-color-purple-color: rgb(123 48 203);
+    --md-extended-color-purple-on-color: rgb(255 255 255);
+    --md-extended-color-purple-color-container: rgb(149 78 230);
+    --md-extended-color-purple-on-color-container: rgb(255 251 255);
+    --md-extended-color-pink-color: rgb(159 52 122);
+    --md-extended-color-pink-on-color: rgb(255 255 255);
+    --md-extended-color-pink-color-container: rgb(255 132 206);
+    --md-extended-color-pink-on-color-container: rgb(122 18 91);
+}
