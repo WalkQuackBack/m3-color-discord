@@ -792,7 +792,9 @@ font-variation-settings:
     /* Emoji */
     .categoryItem_b9ee0c,
     /* Stickers */
-    .stickerCategory__3ad28
+    .stickerCategory__3ad28,
+    /* Soundboard */
+    .category_a1e0e0
     {
         position: relative;
         border-radius: var(--radius-md);
@@ -822,13 +824,15 @@ font-variation-settings:
             }    
         }
 
-        &.stickerCategory__3ad28:not(.stickerCategoryGeneric__3ad28)::after {
+        &.stickerCategory__3ad28:not(.stickerCategoryGeneric__3ad28)::after,
+        &.category_a1e0e0:not(.categoryIcon_a1e0e0)::after {
             translate: 8px 0;
         }
         
         &.categoryItemGuildCategory_b9ee0c,
         &.categoryItemPackCategory_b9ee0c,
-        &.stickerCategory__3ad28:not(.stickerCategoryGeneric__3ad28) {
+        &.stickerCategory__3ad28:not(.stickerCategoryGeneric__3ad28),
+        &.category_a1e0e0:not(.categoryIcon_a1e0e0) {
             height: 32px;
             div:first-of-type {
                 transition: var(--nav-motion-duration) scale ease;
@@ -840,7 +844,7 @@ font-variation-settings:
                 inset: auto 8px -2px auto;
             }
 
-            &:has([mask="url(#svg-mask-squircle)"]) {
+            &:has(> div > svg > [mask="url(#svg-mask-squircle)"]) {
                 --icon-scale: 1;
                 &:hover {
                     &::after {
@@ -859,7 +863,9 @@ font-variation-settings:
     /* Emoji */
     .categoryItemDefaultCategory_b9ee0c,
     /* Stickers */
-    .stickerCategoryGeneric__3ad28 {
+    .stickerCategoryGeneric__3ad28,
+    /* Soundboard */
+    .categoryIcon_a1e0e0 {
         width: 40px;
         height: 34px;
         box-sizing: border-box;
@@ -879,7 +885,9 @@ font-variation-settings:
         &.firstPartyCategorySelected__3ad28,
         &.firstPartyCategorySelected__3ad28:hover,
         &.stickerCategoryGenericSelected__3ad28,
-        &.stickerCategoryGenericSelected__3ad28:hover {
+        &.stickerCategoryGenericSelected__3ad28:hover,
+        /* Soundboard */
+        &.selected_a1e0e0 {
             background-color: color-mix(in oklab, transparent, var(--md-sys-color-primary) var(--active));
             &:hover {
                 background-color: color-mix(in oklab, transparent, var(--md-sys-color-primary) calc(var(--active) + var(--hover)));
@@ -889,7 +897,9 @@ font-variation-settings:
             /* Emoji */
             .categoryIcon_b9ee0c,
             /* Stickers */
-            .stickerCategoryGenericIcon__3ad28 {
+            .stickerCategoryGenericIcon__3ad28,
+            /* Soundboard */
+            .categoryIconIcon_a1e0e0 {
                 color: var(--md-sys-color-primary);
             }
 
