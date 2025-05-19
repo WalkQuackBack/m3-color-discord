@@ -1354,7 +1354,8 @@ font-variation-settings:
     }
 
     /* dropdown */
-    .wrapper__3f413 .select__3f413 {
+    .wrapper__3f413 .select__3f413,
+    .select__3f413 {
         border-radius: var(--radius-xs);
         background-color: transparent;
     }
