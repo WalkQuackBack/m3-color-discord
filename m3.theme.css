@@ -1112,6 +1112,38 @@ font-variation-settings:
         color: var(--md-extended-color-red-on-color);
     }
 
+    /* Status indicator */
+    svg[fill="#ca9654"], rect[fill="#ca9654"] {
+        fill: var(--md-extended-color-yellow-color)
+    }
+    div[style="background-color: rgb(202, 150, 84);"] {
+        background-color: var(--md-extended-color-yellow-color) !important
+    }
+    svg[fill="#d83a42"], rect[fill="#d83a42"] {
+        fill: var(--md-extended-color-red-color)
+    }
+    div[style="background-color: rgb(216, 58, 66);"] {
+        background-color: var(--md-extended-color-red-color) !important
+    }
+    svg[fill="#43a25a"], rect[fill="#43a25a"] {
+        fill: var(--md-extended-color-green-color)
+    }
+    div[style="background-color: rgb(67, 162, 90);"] {
+        background-color: var(--md-extended-color-green-color) !important
+    }
+    svg[fill="#82838b"], rect[fill="#82838b"] {
+        fill: var(--md-sys-color-outline)
+    }
+    div[style="background-color: rgb(130, 131, 139);"] {
+        background-color:var(--md-sys-color-outline) !important
+    }
+    svg[fill="#9147ff"], rect[fill="#9147ff"] {
+        fill: var(--twitch)
+    }
+    div[style="background-color: rgb(145, 71, 255);"]{
+        background-color: var(--twitch) !important
+    }
+
     /* Components */
 
     /* Switch */
