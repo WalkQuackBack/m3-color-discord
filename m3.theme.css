@@ -152,7 +152,7 @@ font-variation-settings:
     --border-faint: var(--md-sys-color-outline-variant);
     --border-subtle: var(--md-sys-color-outline-variant);
     --border-normal: var(--md-sys-color-outline-variant);
-    --border-strong: var(--md-sys-color-on-surface-variant);
+    --border-strong: var(--md-sys-color-outline);
     --input-border: var(--md-sys-color-outline);
 
     --button-danger-background: var(--md-extended-color-red-color);
