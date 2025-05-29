@@ -120,6 +120,8 @@ font-variation-settings:
     --bg-overlay-chat: var(--background-base-lowest);
     --bg-backdrop: color-mix(in oklab, transparent, var(--md-sys-color-scrim) var(--scrim));
 
+    --bg-overlay-4: var(--background-surface-high);
+
     --background-surface-highest: var(--md-sys-color-surface-container-highest);
     --background-surface-higher: var(--md-sys-color-surface-container-high);
     --background-surface-high: var(--md-sys-color-surface-container);
@@ -388,13 +390,13 @@ font-variation-settings:
     --modal-horizontal-padding: 24px;
     --modal-vertical-padding: 24px;
 
-    --custom-standard-sidebar-view-standard-padding: 16px;
+    --custom-standard-sidebar-view-standard-padding: 8px;
 }
 
 .visual-refresh.visual-refresh.visual-refresh {
     /* Main layout */
     /* Server list */
-    .wrapper_ef3116 {
+    .wrapper_ef3116, .sidebar_c48ade {
         background-color: var(--background-surface-high);
     }
     /* Channel list */
@@ -433,12 +435,6 @@ font-variation-settings:
         }
     }
 
-    /* Glow red */
-    button.button__67645.redGlow__67645,
-    span.button__67645.redGlow__67645 {
-        background-color: var(--background-feedback-critical);
-    }
-
     /* Info/Unread banner */
     .notice__30f28,
     .newTopicsBarContainer__0f481,
@@ -463,7 +459,7 @@ font-variation-settings:
         color: inherit;
     }
 
-    /* Settings page sidebar */
+    /* Full screen modal page sidebar */
     .sidebarRegionScroller__23e6b {
         background-color: var(--background-surface-high);
     }
@@ -485,13 +481,37 @@ font-variation-settings:
     .background_e681d1 {
         line-height: 30px;
         font-size: 1em;
-        font-weight: 500;
-        border-radius: var(--radius-round);
+        font-weight: 400;
+        border-radius: 12px;
         margin-bottom: 0;
-        padding-inline: var(--space-12);
+        margin-inline: 2px;
+        padding-inline: 12px;
+
         &.selected_b3f026 {
             background-color: var(--md-sys-color-secondary-container);
             color: var(--md-sys-color-on-secondary-container);
+            font-weight: 500;
+            padding-inline: 14px;
+            margin-inline: 0;
+
+            border-radius: 22px;
+        }
+    }
+
+    &.full-motion {
+        .side_b3f026 .item_b3f026,
+        .background_e681d1 {
+            transition:
+                var(--motion-small-duration) scale ease,
+                var(--motion-morph-duration) font-size ease,
+                var(--motion-small-duration) background ease,
+                var(--motion-small-duration) color ease;
+            /* --motion-morph-duration: 300ms; */
+            --motion-small-duration: 150ms;
+            /* transition:
+                var(--motion-morph-duration) border-radius cubic-bezier(0.42, 1.67, 0.21, 0.90),
+                var(--motion-morph-duration) margin cubic-bezier(0.42, 1.67, 0.21, 0.90),
+                var(--motion-morph-duration) padding cubic-bezier(0.42, 1.67, 0.21, 0.90); */
         }
     }
 
@@ -505,7 +525,9 @@ font-variation-settings:
     .eyebrow_cf4812 {
         font-weight: 600;
         text-transform: none;
-        font-size: 1rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.025rem;
+        color: var(--md-sys-color-tertiary)
     }
 
     /* Floating promo */
@@ -531,6 +553,117 @@ font-variation-settings:
     .botTagOP__82f07 {
         background-color: var(--md-extended-color-blue-color);
         color: var(--md-extended-color-blue-on-color);
+    }
+
+    /* Floating user info island */
+    .panels_c48ade {
+        --custom-panels-spacing: var(--space-xs);
+        border: none;
+        border-radius: 30px 30px 30px 30px;
+        bottom: 16px;
+        left: var(--custom-panels-spacing);
+        position: absolute;
+
+        background-color: var(--md-sys-color-surface-container-high);
+    
+        --_level: 4;
+        --_shadow-color: var(--md-sys-color-shadow);
+        --_shadow-color-a: color-mix(in oklab, transparent, var(--_shadow-color) 30%);
+        --_shadow-color-b: color-mix(in oklab, transparent, var(--_shadow-color) 15%);
+
+        box-shadow:
+            0px calc(1px*(clamp(0,var(--_level),1)
+            + clamp(0,var(--_level) - 3,1)
+            + 2*clamp(0,var(--_level) - 4,1)))
+            calc(1px*(2*clamp(0,var(--_level),1)
+            + clamp(0,var(--_level) - 2,1)
+            + clamp(0,var(--_level) - 4,1)))
+            0px var(--_shadow-color-a),
+
+            0px calc(1px*(clamp(0,var(--_level),1)
+            + clamp(0,var(--_level) - 1,1)
+            + 2*clamp(0,var(--_level) - 2,3)))
+            calc(1px*(3*clamp(0,var(--_level),2)
+            + 2*clamp(0,var(--_level) - 2,3)))
+            calc(1px*(clamp(0,var(--_level),4)
+            + 2*clamp(0,var(--_level) - 4,1)))
+            var(--_shadow-color-b);
+    }
+
+    .container__37e49 {
+        background: unset;
+        box-sizing: border-box;
+        gap: var(--space-xs);
+
+        padding: var(--space-xxs) 8px var(--space-xxs) 4px;
+    }
+
+    .avatarWrapper__37e49 {
+        border-radius: var(--radius-round);
+        gap: var(--space-12);
+        position: relative;
+        padding: 8px 6px;
+        padding-left: 12px;
+        background-color: var(--md-sys-color-surface-container-high);
+    }
+
+    .nameTag__37e49 {
+        gap: 2px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    button.button__67645, span.button__67645 {
+        border-radius: 16px;
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        margin-block: -8px;
+
+        transition:
+            var(--motion-morph-duration) border-radius cubic-bezier(0.42, 1.67, 0.21, 0.90),
+            var(--motion-morph-duration) width cubic-bezier(0.42, 1.67, 0.21, 0.90),
+            var(--motion-small-duration) background ease;
+        
+        &[aria-checked="true"] {
+            border-radius: 8px;
+        }
+        &:hover {
+            background-color: var(--hover-generic);
+        }
+        &.redGlow__67645:hover {
+            background-color: color-mix(in oklab, var(--background-feedback-critical), currentColor var(--hover));
+        }
+
+        /* Touch target */
+        &::before {
+            content: '';
+            border-radius: 0;
+            inset: -6px -2px;
+            position: absolute;
+            pointer-events: all;
+            /* background-color: yellow; */
+        }
+    }
+
+    .buttons__37e49 {
+        gap: var(--space-xxs);
+        & > button:last-of-type {
+            border-radius: 20px;
+            margin-left: 8px;
+            color: var(--text-primary);
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 10px 0;
+                left: -6px;
+                border-left: 1px solid var(--md-sys-color-outline-variant);
+            }
+        }
+    }
+
+    .redGlow__67645, .redGlow__67645.button__67645 {
+        background-color: var(--background-feedback-critical);
     }
 
     /* Checkbox icon */
@@ -1369,26 +1502,39 @@ font-variation-settings:
     .popout__3f413 {
         border-color: transparent;
         border-radius: 8px;
-        --_level: 2;
-        --_shadow-color: var(--md-sys-color-shadow);
-        box-shadow: none;
 
         animation: fade-in 150ms ease;
         transform-origin: center;
+
+        --_level: 2;
+        --_shadow-color: var(--md-sys-color-shadow);
+        --_shadow-color-a: color-mix(in oklab, transparent, var(--_shadow-color) 30%);
+        --_shadow-color-b: color-mix(in oklab, transparent, var(--_shadow-color) 15%);
+
+        box-shadow:
+            0px calc(1px*(clamp(0,var(--_level),1)
+            + clamp(0,var(--_level) - 3,1)
+            + 2*clamp(0,var(--_level) - 4,1)))
+            calc(1px*(2*clamp(0,var(--_level),1)
+            + clamp(0,var(--_level) - 2,1)
+            + clamp(0,var(--_level) - 4,1)))
+            0px var(--_shadow-color-a),
+
+            0px calc(1px*(clamp(0,var(--_level),1)
+            + clamp(0,var(--_level) - 1,1)
+            + 2*clamp(0,var(--_level) - 2,3)))
+            calc(1px*(3*clamp(0,var(--_level),2)
+            + 2*clamp(0,var(--_level) - 2,3)))
+            calc(1px*(clamp(0,var(--_level),4)
+            + 2*clamp(0,var(--_level) - 4,1)))
+            var(--_shadow-color-b);
+
         &::before, &::after {
             content: '';
             border-radius: inherit;
             inset: 0;
             position: absolute;
             pointer-events: none;
-        }
-        &::before {
-            box-shadow: 0px calc(1px*(clamp(0,var(--_level),1) + clamp(0,var(--_level) - 3,1) + 2*clamp(0,var(--_level) - 4,1))) calc(1px*(2*clamp(0,var(--_level),1) + clamp(0,var(--_level) - 2,1) + clamp(0,var(--_level) - 4,1))) 0px var(--_shadow-color);
-            opacity: .3;
-        }
-        &::after {
-            box-shadow: 0px calc(1px*(clamp(0,var(--_level),1) + clamp(0,var(--_level) - 1,1) + 2*clamp(0,var(--_level) - 2,3))) calc(1px*(3*clamp(0,var(--_level),2) + 2*clamp(0,var(--_level) - 2,3))) calc(1px*(clamp(0,var(--_level),4) + 2*clamp(0,var(--_level) - 4,1))) var(--_shadow-color);
-            opacity: .15;
         }
     }
     .scroller_c1e9c4 {
@@ -1494,6 +1640,11 @@ font-variation-settings:
 
     .footer__49fc1 {
         border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+    }
+
+    /* Modal shadow */
+    .rootWithShadow__49fc1 {
+        box-shadow: none;
     }
 
     /* Checkbox */
